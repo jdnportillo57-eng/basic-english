@@ -1,0 +1,2596 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Basic English</title>
+<meta name="description" content="A free Basic English course (A1–A2) for English majors at Universidad Tecnológica de El Salvador: lessons with audio, pictures and an AI assistant.">
+<meta name="theme-color" content="#F1F2EF">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230F47AF'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-family='Arial' font-weight='700' font-size='34' fill='%23fff'%3EBE%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;700;800&family=Gentium+Book+Plus&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ai-w:clamp(480px,40vw,680px);
+  --bg:#F1F2EF; --surface:#E3E6E1; --surface-2:#D3D8D1;
+  --ink:#0E1B2E; --muted:#45505F;
+  --accent:#0F47AF; --accent-hover:#0B3A91; --accent-ink:#FFFFFF;
+  --field:#0F47AF; --field-ink:#FFFFFF; --field-muted:#D6E1F7;
+  --night:#0E1B2E; --night-ink:#F1F2EF; --night-muted:#B9C2D0;
+  --ok:#1D6B3B; --ok-bg:#DCEBDD; --no:#A8261D; --no-bg:#F3DEDB;
+  --font-display:"Atkinson Hyperlegible Next", "Atkinson Hyperlegible", system-ui, sans-serif;
+  --font-text:"Atkinson Hyperlegible Next", "Atkinson Hyperlegible", system-ui, sans-serif;
+  --font-ipa:"Gentium Book Plus", "Charis SIL", "Doulos SIL", serif;
+  --step-small:clamp(0.875rem,0.85rem + 0.1vw,0.9375rem);
+  --step-body:clamp(1.0625rem,1rem + 0.25vw,1.1875rem);
+  --step-lead:clamp(1.25rem,1.1rem + 0.7vw,1.625rem);
+  --step-head:clamp(2rem,1.2rem + 3.4vw,4.25rem);
+  --step-display:clamp(2.75rem,7.1vw,7.5rem);
+  --step-big:clamp(2.4rem,1rem + 4.2vw,5rem);
+  --margin:clamp(16px,3.2vw,48px);
+  --gap-section:clamp(96px,12vw,200px);
+  --ease-out:cubic-bezier(0.23,1,0.32,1);
+  --ease-in-out:cubic-bezier(0.77,0,0.175,1);
+  --header-h:64px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:calc(var(--header-h) + 16px);scrollbar-color:var(--muted) var(--surface)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-text);font-size:var(--step-body);line-height:1.55;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;caret-color:var(--accent)}
+::selection{background:var(--accent);color:var(--accent-ink)}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration-thickness:0.08em;text-underline-offset:0.2em}
+a:hover{text-decoration-color:var(--accent)}
+button{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:2px}
+.field :focus-visible,.night :focus-visible{outline-color:#fff}
+h1,h2,h3{font-family:var(--font-display);font-weight:700;letter-spacing:-0.03em;line-height:1.02;margin:0;text-wrap:balance;font-optical-sizing:auto}
+p{margin:0 0 1em}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.skip{position:absolute;left:var(--margin);top:-100px;background:var(--ink);color:var(--bg);padding:12px 18px;z-index:100;border-radius:999px;text-decoration:none}
+.skip:focus{top:12px}
+.wrap{padding-inline:var(--margin);max-width:1600px;margin-inline:auto}
+.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(12px,2vw,32px)}
+.ipa{font-family:var(--font-ipa);font-weight:400;letter-spacing:0;font-size:0.95em}
+
+/* ---------- header ---------- */
+.site-header{position:sticky;top:0;z-index:40;background:var(--bg);height:var(--header-h);transition:background-color 200ms ease}
+.site-header.scrolled{box-shadow:0 1px 0 var(--surface-2)} /* taste-skill-ignore: sticky bar */
+.site-header .wrap{display:flex;align-items:center;height:100%;gap:24px}
+.wordmark{font-family:var(--font-display);font-weight:800;font-size:1.3rem;letter-spacing:-0.035em;text-decoration:none;display:flex;align-items:baseline;gap:10px;white-space:nowrap}
+.wordmark .ipa{font-size:0.95rem;color:var(--muted);font-weight:400}
+.nav{display:flex;align-items:center;gap:clamp(16px,2.4vw,36px);margin-left:auto}
+.nav a{text-decoration:none;font-size:1rem;padding:8px 0;position:relative}
+.nav a[aria-current="page"]{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:8px;text-decoration-color:var(--accent)}
+.menu-btn{display:none;margin-left:auto;background:var(--ink);color:var(--bg);border:0;border-radius:999px;padding:10px 18px;cursor:pointer;min-height:44px}
+@media (max-width:820px){
+  .nav{display:none}
+  .menu-btn{display:inline-flex;align-items:center;gap:8px}
+  .wordmark .ipa{display:none}
+  .nav.open{display:flex;position:fixed;inset:var(--header-h) 0 auto 0;flex-direction:column;align-items:stretch;gap:0;background:var(--bg);padding:8px var(--margin) 24px;box-shadow:0 18px 30px -18px rgba(0,0,0,.25); /* taste-skill-ignore: open menu overlay */animation:menu-in 220ms var(--ease-out)}
+  .nav.open a{font-size:1.5rem;font-family:var(--font-display);font-weight:700;padding:14px 0}
+  .nav.open .btn{margin-top:12px;justify-content:center}
+}
+@keyframes menu-in{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
+
+/* ---------- buttons ---------- */
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:12px 24px;border-radius:999px;border:0;background:var(--accent);color:var(--accent-ink);font-weight:700;font-size:1rem;text-decoration:none;cursor:pointer;transition:transform 140ms var(--ease-out),background-color 160ms ease;white-space:nowrap}
+.btn:hover{background:var(--accent-hover)}
+.btn:active{transform:scale(0.97)}
+.btn.ghost{background:var(--bg);color:var(--ink)}
+.btn.ghost:hover{background:var(--surface-2)}
+.btn.light{background:#fff;color:var(--accent)}
+.btn.light:hover{background:var(--field-muted)}
+.btn.small{min-height:40px;padding:8px 18px;font-size:0.95rem}
+.btn svg{width:20px;height:20px;flex:none}
+.link-arrow{display:inline-flex;align-items:center;gap:8px;font-weight:700;text-decoration:none}
+.link-arrow svg{width:20px;height:20px;transition:transform 180ms var(--ease-out)}
+@media (hover:hover) and (pointer:fine){.link-arrow:hover svg{transform:translateX(4px)}}
+
+/* listen button */
+.say{flex:none;width:36px;height:36px;border-radius:999px;border:0;background:var(--surface);color:var(--accent);display:inline-grid;place-items:center;cursor:pointer;transition:transform 140ms var(--ease-out),background-color 160ms ease;position:relative}
+.say:hover{background:var(--surface-2)}
+.say:active{transform:scale(0.92)}
+.say svg{width:18px;height:18px}
+.say .bars{display:none}
+.say[aria-pressed="true"]{background:var(--accent);color:#fff}
+.say[aria-pressed="true"] .spk{display:none}
+.say[aria-pressed="true"] .bars{display:block}
+.bars rect{transform-origin:center;animation:bar 700ms ease-in-out infinite}
+.bars rect:nth-child(2){animation-delay:-200ms}.bars rect:nth-child(3){animation-delay:-400ms}
+@keyframes bar{0%,100%{transform:scaleY(.35)}50%{transform:scaleY(1)}}
+.no-speech .say{display:none}
+
+/* ---------- views ---------- */
+main{min-height:70vh}
+main:focus{outline:none}
+.view > *{animation:rise 520ms var(--ease-out) both;animation-delay:calc(var(--i,0) * 70ms)}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity 600ms var(--ease-out),transform 700ms var(--ease-out);transition-delay:calc(var(--i,0) * 80ms)}
+.reveal.in{opacity:1;transform:none}
+.no-js .reveal{opacity:1;transform:none}
+
+/* ---------- home: hero ---------- */
+.hero{padding-top:clamp(40px,7vh,96px);padding-bottom:clamp(48px,8vh,112px)}
+.hero h1{font-size:var(--step-display);font-weight:800;letter-spacing:-0.045em;line-height:0.92;text-wrap:initial}
+.hero h1 .line{display:block;white-space:nowrap}
+.hero{overflow-x:clip}
+.hero h1 .line2{display:flex;align-items:center;gap:0.18em}
+.reel{position:relative;display:inline-block;flex:none;width:2.4em;height:0.78em;overflow:hidden;background:var(--surface);vertical-align:middle;margin-top:0.06em}
+.reel > *{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.08);transition:opacity 700ms ease,transform 3600ms linear}
+.reel > .on{opacity:1;transform:scale(1)}
+.reel .glyph{display:grid;place-items:center;background:var(--accent);color:#fff;font-family:var(--font-ipa);font-weight:400;font-size:0.62em;letter-spacing:0;line-height:1}
+.hero-foot{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(12px,2vw,32px);margin-top:clamp(32px,5vw,56px);align-items:end}
+.hero-word{grid-column:1 / span 5;display:flex;align-items:center;gap:14px;font-size:var(--step-lead)}
+.hero-word .pos{font-style:italic;color:var(--muted);font-size:0.8em}
+.hero-lead{grid-column:6 / span 4;font-size:var(--step-lead);line-height:1.35;margin:0}
+.hero-actions{grid-column:10 / span 3;display:flex;flex-direction:column;align-items:flex-start;gap:14px;justify-self:end}
+@media (max-width:1100px){
+  .hero-word{grid-column:1 / -1;margin-bottom:24px}
+  .hero-lead{grid-column:1 / span 8}
+  .hero-actions{grid-column:9 / -1}
+}
+@media (max-width:900px){
+  .hero h1{font-size:clamp(2.1rem,9vw,4.6rem)}
+  .hero h1 .line2{flex-direction:column;align-items:flex-start;gap:0}
+  .hero h1 .line2 .reel{order:-1;width:100%;height:auto;aspect-ratio:16/9;margin:18px 0 14px}
+  .hero-lead,.hero-actions{grid-column:1 / -1}
+  .hero-actions{justify-self:start;flex-direction:row;flex-wrap:wrap;margin-top:24px}
+}
+
+/* ---------- home: listen tool ---------- */
+.section{padding-top:var(--gap-section)}
+.listen{align-items:start}
+.listen-copy{grid-column:1 / span 5}
+.listen-copy h2{font-size:var(--step-head);margin-bottom:24px}
+.listen-copy p{max-width:40ch}
+.tool{margin-top:28px;background:var(--surface);padding:clamp(18px,2.4vw,28px)}
+.tool label{display:block;font-weight:700;margin-bottom:10px}
+.tool textarea{width:100%;min-height:96px;resize:vertical;font:inherit;font-size:var(--step-lead);line-height:1.3;color:var(--ink);background:var(--bg);border:2px solid transparent;border-radius:0;padding:14px 16px;transition:border-color 160ms ease}
+.tool textarea:focus{outline:none;border-color:var(--accent)}
+.tool-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px;align-items:center}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.chip{border:0;background:var(--bg);border-radius:999px;padding:8px 14px;min-height:40px;cursor:pointer;font-size:0.95rem;text-align:left;transition:background-color 160ms ease,transform 140ms var(--ease-out)}
+.chip:hover{background:var(--surface-2)}
+.chip:active{transform:scale(0.97)}
+.tool-note{font-size:var(--step-small);color:var(--muted);margin-top:14px;margin-bottom:0}
+.listen-figure{grid-column:7 / -1;margin:0}
+.listen-figure img{width:100%;aspect-ratio:4/3;object-fit:cover;background:var(--surface)}
+.listen-figure figcaption{font-size:var(--step-small);color:var(--muted);margin-top:10px}
+@media (max-width:900px){.listen-copy,.listen-figure{grid-column:1 / -1}.listen-figure{margin-top:40px}}
+
+/* ---------- home: staircase path ---------- */
+.path h2.sr-only + .stair{margin-top:0}
+.stair{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(12px,2vw,32px);row-gap:clamp(40px,5vw,64px)}
+.stair li{grid-column:1 / -1}
+.stair a{text-decoration:none;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(12px,2vw,32px);align-items:center}
+.stair .txt{grid-row:1}
+.stair img{grid-row:1;width:100%;aspect-ratio:16/10;object-fit:cover;background:var(--surface);transition:transform 500ms var(--ease-out)}
+.stair li:nth-child(1) .txt{grid-column:1 / span 7}.stair li:nth-child(1) img{grid-column:9 / -1}
+.stair li:nth-child(2) .txt{grid-column:3 / span 6}.stair li:nth-child(2) img{grid-column:10 / -1}
+.stair li:nth-child(3) .txt{grid-column:5 / span 6}.stair li:nth-child(3) img{grid-column:1 / span 3}
+.stair li:nth-child(4) .txt{grid-column:7 / -1}.stair li:nth-child(4) img{grid-column:1 / span 4}
+@media (hover:hover) and (pointer:fine){.stair a:hover img{transform:scale(1.02)}}
+.stair .big{font-family:var(--font-display);font-weight:800;font-size:var(--step-big);letter-spacing:-0.04em;line-height:1;display:block;transition:color 160ms ease}
+.stair li:last-child .big{color:var(--accent)}
+@media (hover:hover) and (pointer:fine){.stair a:hover .big{color:var(--accent)}}
+.stair .small{display:block;margin-top:12px;max-width:44ch;color:var(--muted)}
+.stair .small b{color:var(--ink);white-space:nowrap}
+.stair .small b svg{width:18px;height:18px;vertical-align:-3px;margin-left:4px;transition:transform 180ms var(--ease-out)}
+@media (hover:hover) and (pointer:fine){.stair a:hover .small b svg{transform:translateX(4px)}}
+@media (max-width:820px){
+  .stair a{display:flex;flex-direction:column;align-items:stretch;gap:18px}
+  .stair li:nth-child(n) img{order:-1;width:72%}
+  .stair li:nth-child(2) a{padding-left:6vw}.stair li:nth-child(3) a{padding-left:12vw}.stair li:nth-child(4) a{padding-left:18vw}
+}
+
+/* ---------- home: lessons showcase ---------- */
+.showcase .statement{grid-column:1 / span 5;align-self:end}
+.showcase h2{font-size:var(--step-head);margin-bottom:24px}
+.showcase .big-figure{grid-column:6 / -1;margin:0}
+.showcase .big-figure img{width:100%;aspect-ratio:16/10;object-fit:cover;background:var(--surface)}
+.showcase .big-figure figcaption{font-size:var(--step-small);color:var(--muted);margin-top:10px}
+.facts{list-style:none;padding:0;margin:28px 0 0;display:grid;grid-template-columns:repeat(3,auto);justify-content:start;gap:8px 40px}
+.facts strong{display:block;font-family:var(--font-display);font-size:var(--step-head);letter-spacing:-0.04em;line-height:1}
+.facts span{color:var(--muted);font-size:var(--step-small)}
+@media (max-width:900px){.showcase .statement,.showcase .big-figure{grid-column:1 / -1}.showcase .big-figure{margin-top:32px}}
+
+/* ---------- field sections ---------- */
+.field{background:var(--field);color:var(--field-ink);margin-top:var(--gap-section);padding-block:clamp(72px,9vw,140px)}
+.field .muted{color:var(--field-muted)}
+/* ---------- assistant: floating button + side panel ---------- */
+.ai-fab{position:fixed;right:clamp(14px,2vw,28px);bottom:clamp(14px,2vw,28px);z-index:55;display:inline-flex;align-items:center;gap:12px;min-height:56px;padding:10px 22px 10px 16px;border:0;border-radius:999px;background:var(--ink);color:#fff;font-weight:700;font-size:1rem;cursor:pointer;box-shadow:0 10px 28px -10px rgba(0,0,0,.35); /* taste-skill-ignore: floating control */
+  transition:transform 160ms var(--ease-out),background-color 160ms ease;animation:fab-in 600ms var(--ease-out) 500ms both}
+.ai-fab:hover{background:#1A2C47}
+.ai-fab:active{transform:scale(0.97)}
+.ai-fab[hidden]{display:none}
+.ai-fab .ai-dot{width:30px;height:30px;border-radius:999px;background:var(--accent);display:grid;place-items:center;position:relative;flex:none}
+.ai-fab .ai-dot::after{content:"";position:absolute;right:-1px;bottom:-1px;width:10px;height:10px;border-radius:999px;background:#3DDC84;border:2px solid var(--ink)}
+.ai-fab .ai-dot::before{content:"";width:14px;height:11px;border:2px solid #fff;border-radius:6px 6px 6px 2px}
+.ai-fab{transition:transform 160ms var(--ease-out),background-color 160ms ease,opacity 200ms ease}
+.ai-fab-label{transition:opacity 140ms ease,transform 140ms var(--ease-out)}
+.ai-fab-label.swap{opacity:0;transform:translateY(4px)}
+body.ai-open .ai-fab,.ai-fab.away{opacity:0;pointer-events:none;transform:scale(0.95)}
+@keyframes fab-in{from{opacity:0;transform:translateY(16px) scale(0.96)}to{opacity:1;transform:none}}
+.ai-panel{position:fixed;z-index:60;top:0;right:0;height:100dvh;width:min(var(--ai-w),100vw);background:var(--bg);display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:auto 1fr;box-shadow:-20px 0 40px -24px rgba(0,0,0,.3); /* taste-skill-ignore: side panel overlay */
+  transform:translateX(104%);visibility:hidden;transition:transform 220ms var(--ease-out),visibility 0s linear 220ms}
+.ai-panel.open{transform:none;visibility:visible;transition:transform 360ms cubic-bezier(0.32,0.72,0,1),visibility 0s,width 320ms cubic-bezier(0.32,0.72,0,1)}
+.ai-panel.wide{width:min(1180px,94vw)}
+.ai-close{flex:none;width:40px;height:40px;border:0;border-radius:999px;background:rgba(255,255,255,.12);color:#fff;display:grid;place-items:center;cursor:pointer;transition:background-color 160ms ease}
+.ai-close:hover{background:rgba(255,255,255,.22)}
+.ai-close svg{width:20px;height:20px}
+@media (min-width:1100px){body.ai-open main,body.ai-open .site-footer{margin-right:var(--ai-w)}body.ai-open .site-header .wrap{padding-right:calc(var(--ai-w) + var(--margin))}
+  body.ai-open .nav{gap:20px}body.ai-open .wordmark .ipa{display:none}
+  body.ai-open .lesson-layout{grid-template-columns:1fr;gap:24px}
+  body.ai-open .side{position:static;max-height:none;overflow:visible;padding:0}
+  body.ai-open .side-toggle{display:flex;width:100%;justify-content:space-between;align-items:center;background:var(--surface);border:0;padding:14px 18px;min-height:52px;font-weight:700;cursor:pointer}
+  body.ai-open .side-toggle svg{width:20px;height:20px}
+  body.ai-open .side .side-body{display:none;padding:12px 18px 8px;background:var(--surface)}
+  body.ai-open .side[data-open="true"] .side-body{display:block}}
+@media (max-width:700px){
+  .ai-panel{top:auto;bottom:0;width:100vw;height:90dvh;border-radius:16px 16px 0 0;overflow:hidden;transform:translateY(104%)}
+  .ai-fab{padding-right:18px}
+}
+
+/* panel bar */
+.ai-bar{display:flex;align-items:center;gap:8px;padding:8px 8px 8px 16px;background:var(--night);color:#fff}
+.ai-bar .ai-ctx{flex:1;min-width:0;font-size:var(--step-small);color:var(--night-muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ai-expand{flex:none;display:inline-flex;align-items:center;gap:6px;min-height:40px;padding:6px 12px;border:0;border-radius:999px;background:rgba(255,255,255,.12);color:#fff;font-weight:700;font-size:0.9rem;cursor:pointer;transition:background-color 160ms ease}
+.ai-expand:hover{background:rgba(255,255,255,.22)}
+.ai-expand svg{width:18px;height:18px}
+@media (max-width:1000px){.ai-expand{display:none}}
+.ai-slot{min-height:0;display:grid}
+.ai-slot .chat{height:100%;min-height:0}
+
+/* ---------- the chat ---------- */
+.chat{display:grid;grid-template-rows:auto minmax(0,1fr) auto auto;grid-template-columns:minmax(0,1fr);background:#fff;min-height:0}
+.chat-top{display:flex;align-items:center;gap:10px;padding:12px 12px 12px 16px;background:var(--ink);color:#fff}
+.chat-top .who{display:flex;align-items:center;gap:12px;flex:1;min-width:0}
+.chat-top .who > div{min-width:0}
+.chat-top strong{display:block;font-size:1.05rem}
+.avatar{flex:none;width:40px;height:40px;border-radius:999px;background:var(--accent);display:grid;place-items:center}
+.avatar svg{width:22px;height:22px}
+.status{display:flex;align-items:center;gap:8px;font-size:var(--step-small);color:var(--night-muted);white-space:nowrap;overflow:hidden}
+.status .chat-ctx{overflow:hidden;text-overflow:ellipsis}
+.seg{display:flex;background:rgba(255,255,255,.1);border-radius:999px;padding:3px}
+.seg button{border:0;background:transparent;color:#fff;font-weight:700;font-size:0.9rem;min-height:36px;padding:6px 14px;border-radius:999px;cursor:pointer;transition:background-color 180ms ease,color 180ms ease}
+.seg button[aria-checked="true"]{background:#fff;color:var(--ink)}
+.icon-btn{flex:none;width:40px;height:40px;border:0;border-radius:999px;background:rgba(255,255,255,.1);color:#fff;display:grid;place-items:center;cursor:pointer;transition:background-color 160ms ease,transform 140ms var(--ease-out)}
+.icon-btn:hover{background:rgba(255,255,255,.2)}
+.icon-btn:active{transform:scale(0.94)}
+.icon-btn svg{width:20px;height:20px}
+.chat-voice[aria-pressed="true"]{background:#3DDC84;color:var(--ink)}
+@media (max-width:560px){.chat-top{gap:8px;padding:10px 10px 10px 12px}.chat-top .who > div{display:none}.chat-top .who{flex:none}.seg{margin-right:auto}.seg button{padding:6px 12px;font-size:0.88rem}.avatar{width:36px;height:36px}}
+.chat-log{overflow-y:auto;overscroll-behavior:contain;padding:20px clamp(14px,2vw,24px);display:flex;flex-direction:column;gap:14px;scrollbar-width:thin}
+.chat-log:focus-visible{outline-offset:-3px}
+.msg{max-width:min(88%,640px);font-size:1.02rem;line-height:1.5}
+.msg p{margin:0 0 0.6em}.msg p:last-child{margin-bottom:0}
+.msg ol,.msg ul{margin:0.2em 0 0.7em;padding-left:1.3em}
+.msg li{margin:0.15em 0}
+.msg.bot{align-self:flex-start;background:var(--surface);padding:12px 16px;border-radius:18px 18px 18px 4px}
+.msg.me{align-self:flex-end;background:var(--accent);color:#fff;padding:10px 16px;border-radius:18px 18px 4px 18px}
+.msg.err{background:var(--no-bg);color:var(--no)}
+.msg.enter{animation:msg-in 280ms var(--ease-out) both}
+@keyframes msg-in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.msg .w{font:inherit;font-weight:700;color:var(--ink);background:none;border:0;padding:0 2px;margin:0 -2px;border-radius:4px;cursor:pointer;text-decoration:underline dotted var(--accent);text-decoration-thickness:2px;text-underline-offset:3px;transition:background-color 140ms ease,color 140ms ease}
+.msg .w:hover{background:#D6E1F7}
+.msg .w[aria-pressed="true"]{background:var(--accent);color:#fff;text-decoration:none}
+.msg-acts{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.mini{display:inline-flex;align-items:center;gap:6px;min-height:34px;padding:4px 12px;border:0;border-radius:999px;background:var(--bg);color:var(--ink);font:inherit;font-size:0.88rem;font-weight:700;text-decoration:none;cursor:pointer;transition:background-color 140ms ease,transform 140ms var(--ease-out)}
+.mini:hover{background:var(--surface-2)}
+.mini:active{transform:scale(0.96)}
+.mini svg{width:16px;height:16px}
+.mini[aria-pressed="true"]{background:var(--accent);color:#fff}
+.typing{padding:12px 18px}
+.think{font-weight:700;color:var(--muted);animation:think 1.4s ease-in-out infinite}
+@keyframes think{0%,100%{opacity:.45}50%{opacity:1}}
+@media (prefers-reduced-motion:reduce){.think{animation:none}}
+.welcome{display:flex;flex-direction:column;gap:14px}
+.starters{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,210px),1fr));gap:10px}
+.starters button{width:100%;display:flex;gap:12px;align-items:center;text-align:left;border:0;background:var(--bg);padding:14px;border-radius:14px;cursor:pointer;font:inherit;color:var(--ink);transition:background-color 160ms ease,transform 140ms var(--ease-out)}
+.starters button:hover{background:#D6E1F7}
+.starters button:active{transform:scale(0.98)}
+.starters .ic{flex:none;width:40px;height:40px;border-radius:999px;background:var(--accent);color:#fff;display:grid;place-items:center}
+.starters .ic svg{width:20px;height:20px}
+.starters strong{display:block;font-size:1rem}
+.starters strong + span{display:block;font-size:var(--step-small);color:var(--muted)}
+.chat-sugg{display:flex;gap:8px;overflow-x:auto;padding:10px clamp(14px,2vw,24px) 2px;scrollbar-width:none}
+.chat-sugg::-webkit-scrollbar{display:none}
+.chat-sugg:empty{display:none}
+.chat-sugg .chip{flex:none;white-space:nowrap;background:var(--bg);font-size:0.92rem;min-height:38px;padding:6px 14px}
+.chat-form{display:flex;align-items:flex-end;gap:8px;padding:12px clamp(12px,2vw,20px) 14px}
+.chat-form textarea{flex:1;min-width:0;resize:none;font:inherit;font-size:1rem;line-height:1.4;color:var(--ink);background:var(--bg);border:2px solid transparent;border-radius:24px;padding:12px 18px;min-height:50px;max-height:160px;transition:border-color 160ms ease}
+.chat-form textarea:focus{outline:none;border-color:var(--accent)}
+.chat-form .mic,.chat-form .send{flex:none;width:50px;height:50px;border:0;border-radius:999px;display:grid;place-items:center;cursor:pointer;position:relative;transition:transform 140ms var(--ease-out),background-color 160ms ease}
+.chat-form .mic{background:var(--surface);color:var(--ink)}
+.chat-form .mic:hover{background:var(--surface-2)}
+.chat-form .send{background:var(--accent);color:#fff}
+.chat-form .send:hover{background:var(--accent-hover)}
+.chat-form .mic:active,.chat-form .send:active{transform:scale(0.94)}
+.chat-form svg{width:22px;height:22px}
+.chat-form .mic[hidden]{display:none}
+.chat-form .mic[aria-pressed="true"]{background:#D93025;color:#fff}
+.chat-form .mic[aria-pressed="true"]::after{content:"";position:absolute;inset:0;border-radius:999px;background:#D93025;z-index:-1;animation:live 1.4s cubic-bezier(0.23,1,0.32,1) infinite}
+.chat.busy .send{opacity:.5;pointer-events:none}
+
+/* ---------- home: the assistant is the stage ---------- */
+.stage{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(16px,2.4vw,40px);align-items:stretch;padding-top:clamp(16px,3vh,32px)}
+.stage-copy{grid-column:1 / span 4;display:flex;flex-direction:column;justify-content:center;padding-block:24px}
+.stage h1{font-size:clamp(2.6rem,1rem + 4.4vw,5.4rem);font-weight:800;letter-spacing:-0.045em;line-height:0.95}
+.stage-lead{font-size:var(--step-lead);line-height:1.35;margin:22px 0 0;max-width:30ch}
+.how{list-style:none;margin:28px 0 28px;padding:0;display:grid;gap:14px}
+.how li{display:flex;gap:12px;align-items:center;line-height:1.35}
+.how .ic{flex:none;width:38px;height:38px;border-radius:999px;background:var(--surface);color:var(--accent);display:grid;place-items:center}
+.how .ic svg{width:20px;height:20px}
+.stage-chat{grid-column:5 / -1;display:grid;min-height:0;height:calc(100svh - var(--header-h) - clamp(32px,6vh,64px));min-height:560px;max-height:900px;box-shadow:0 30px 60px -36px rgba(0,0,0,.35)} /* taste-skill-ignore: the app window */
+.stage-chat .chat{height:100%}
+@media (max-width:980px){
+  .stage-copy,.stage-chat{grid-column:1 / -1}
+  .stage-copy{padding-block:8px 20px}
+  .stage h1{font-size:clamp(2.2rem,8vw,3.6rem)}
+  .how{display:none}
+  .stage-copy .link-arrow{order:3}
+  .stage-chat{height:min(82svh,760px);min-height:520px;margin-inline:calc(var(--margin) * -1)}
+}
+.path-title{font-size:var(--step-big);font-weight:800;letter-spacing:-0.045em}
+.path-lead{font-size:var(--step-lead);color:var(--muted);max-width:44ch;margin:18px 0 clamp(40px,5vw,72px)}
+
+/* ---------- simpler lessons ---------- */
+.lesson-meta{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:baseline;margin:0 0 10px;font-size:var(--step-small);color:var(--muted)}
+.lesson-meta a{font-weight:700;color:var(--accent)}
+.lesson-progress{height:6px;background:var(--surface);border-radius:999px;overflow:hidden;margin-bottom:28px;max-width:360px}
+.lesson-progress span{display:block;height:100%;background:var(--accent);border-radius:999px;transform-origin:left;animation:grow 700ms var(--ease-out) both}
+@keyframes grow{from{transform:scaleX(0)}}
+.jump{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:28px}
+.jump > span{font-size:var(--step-small);font-weight:700;color:var(--muted);margin-right:4px}
+.jump .chip{background:var(--surface);min-height:38px;padding:6px 14px;font-size:0.92rem}
+.jump .chip:hover{background:var(--surface-2)}
+.article h2:focus{outline:none}
+.article .lead-p{font-size:var(--step-lead);line-height:1.4;color:var(--ink);max-width:40ch}
+.big-next{min-height:60px;padding:16px 30px;font-size:1.15rem}
+.next-name{margin:12px 0 0;color:var(--muted);font-size:var(--step-small)}
+.foot-row{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-top:40px}
+.foot-row .back{font-weight:700;color:var(--muted)}
+.foot-row .back svg{width:20px;height:20px}
+.next-up{display:grid;grid-template-columns:1fr auto;grid-template-rows:auto auto auto;column-gap:24px;max-width:640px;margin-top:32px;padding:22px 24px;background:var(--accent);color:#fff;text-decoration:none;transition:background-color 160ms ease,transform 140ms var(--ease-out)}
+.next-up:hover{background:var(--accent-hover)}
+.next-up:active{transform:scale(0.99)}
+.nu-label{font-size:var(--step-small);font-weight:700;color:var(--field-muted)}
+.nu-title{font-family:var(--font-display);font-size:clamp(1.4rem,1rem + 1.2vw,2rem);font-weight:800;letter-spacing:-0.02em;line-height:1.15;margin-top:4px}
+.nu-meta{font-size:var(--step-small);color:var(--field-muted);margin-top:6px}
+.nu-go{grid-column:2;grid-row:1 / -1;align-self:center;width:52px;height:52px;border-radius:999px;background:#fff;color:var(--accent);display:grid;place-items:center}
+.nu-go svg{width:24px;height:24px;transition:transform 180ms var(--ease-out)}
+@media (hover:hover) and (pointer:fine){.next-up:hover .nu-go svg{transform:translateX(3px)}}
+
+/* inline ask buttons */
+.ask{flex:none;display:inline-flex;align-items:center;gap:6px;margin-left:auto;border:0;background:transparent;color:var(--accent);font-weight:700;font-size:0.9rem;min-height:36px;padding:4px 10px;border-radius:999px;cursor:pointer;opacity:0;transition:opacity 160ms ease,background-color 160ms ease}
+.ask svg{width:18px;height:18px}
+.ask:hover{background:var(--surface)}
+.ex-list li:hover .ask,.ex-list li:focus-within .ask,.cards li:hover .ask,.cards li:focus-within .ask{opacity:1}
+@media (hover:none){.ask{opacity:1}.ask span{display:none}}
+.cards p .ask{padding:4px 8px}
+.link-ask{display:inline-flex;align-items:center;gap:6px;border:0;background:none;padding:4px 0;color:var(--accent);font:inherit;font-weight:700;text-decoration:underline;text-underline-offset:0.2em;cursor:pointer}
+.link-ask svg{width:18px;height:18px}
+.as-btn{background:none;border:0;padding:0;cursor:pointer;font:inherit;color:inherit;font-weight:700}
+/* lesson band */
+.ai-band{margin-top:clamp(56px,7vw,96px);background:var(--field);color:#fff;padding:clamp(24px,3vw,40px)}
+.ai-band h2{margin:0 0 10px;color:#fff}
+.ai-band p{color:var(--field-muted);max-width:56ch}
+.ai-band .ai-chips{flex-wrap:wrap;overflow:visible}
+.ai-band .chip{background:#fff;color:var(--ink)}
+.ai-band .chip:hover{background:var(--field-muted)}
+.ai-band + .lesson-foot{margin-top:48px}
+@media (prefers-reduced-motion:reduce){
+  .ai-panel,.ai-panel.open{transition:visibility 0s,opacity 200ms ease}
+  .ai-panel{transform:none;opacity:0}.ai-panel.open{opacity:1}
+  .ai-fab{animation:none}.live-dot::after{animation:none;opacity:0}
+}
+
+/* ---------- about (drop-cap portrait) ---------- */
+.about-block .facts-col{grid-column:1 / span 2;font-size:var(--step-small);color:var(--muted);padding-top:6px}
+.about-block .facts-col dt{color:var(--ink);font-weight:700}
+.about-block .facts-col dd{margin:0 0 18px}
+.about-block .bio{grid-column:3 / -1;font-size:clamp(1.35rem,0.9rem + 1.4vw,2.2rem);line-height:1.22;letter-spacing:-0.012em}
+.about-block .bio img{float:left;width:3.6em;height:3.6em;object-fit:cover;margin:0.2em 0.5em 0.1em 0;background:var(--surface)}
+.about-block .bio p{max-width:46ch}
+.about-block .bio .soft{color:var(--muted)}
+.about-block h2{grid-column:3 / -1;font-size:var(--step-head);margin-bottom:28px}
+@media (max-width:900px){.about-block .facts-col,.about-block .bio,.about-block h2{grid-column:1 / -1}.about-block .facts-col{order:3;display:grid;grid-template-columns:auto 1fr;gap:4px 20px;margin-top:28px}.about-block .facts-col dd{margin:0 0 10px}.about-block .bio img{width:4.4em;height:4.4em}}
+
+/* ---------- FAQ ---------- */
+.faq h2{font-size:var(--step-big);font-weight:800;letter-spacing:-0.045em;grid-column:1 / -1}
+.faq .qs{grid-column:5 / -1;margin-top:64px}
+.faq details{padding:18px 24px;margin:0 -24px 8px;transition:background-color 200ms ease}
+.faq details[open]{background:var(--surface)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:24px;font-size:clamp(1.15rem,1rem + 0.5vw,1.5rem);font-weight:700;min-height:44px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary svg{flex:none;width:22px;height:22px;transition:transform 220ms var(--ease-out)}
+.faq details[open] summary svg{transform:rotate(180deg)}
+.faq details p{max-width:56ch;margin:12px 0 4px}
+@media (max-width:900px){.faq .qs{grid-column:1 / -1;margin-top:40px}.faq details{margin-inline:calc(var(--margin) * -1);padding-inline:var(--margin)}}
+
+/* ---------- footer ---------- */
+.site-footer{background:var(--night);color:var(--night-ink);margin-top:var(--gap-section);padding-top:clamp(64px,8vw,120px);padding-bottom:40px}
+.site-footer .name{font-family:var(--font-display);font-weight:800;font-size:clamp(3.2rem,0.5rem + 12.5vw,15rem);letter-spacing:-0.055em;line-height:0.85;margin:0 0 clamp(40px,5vw,72px);white-space:nowrap}
+.site-footer .cols{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(12px,2vw,32px);row-gap:32px;color:var(--night-muted)}
+.site-footer .cols > div:nth-child(1){grid-column:1 / span 6}
+.site-footer .cols > div:nth-child(2){grid-column:7 / span 3}
+.site-footer .cols > div:nth-child(3){grid-column:10 / span 3}
+.site-footer h2{font-family:var(--font-text);font-size:1rem;letter-spacing:0;color:var(--night-ink);margin-bottom:10px}
+.site-footer ul{list-style:none;margin:0;padding:0}
+.site-footer li{margin-bottom:6px}
+.site-footer a{color:var(--night-ink)}
+.site-footer .fine{margin-top:56px;font-size:var(--step-small);color:var(--night-muted)}
+@media (max-width:820px){.site-footer .cols > div:nth-child(n){grid-column:1 / -1}}
+
+/* ---------- page header (inner pages) ---------- */
+.page-head{padding-top:clamp(32px,6vh,80px);padding-bottom:clamp(32px,5vw,64px)}
+.crumbs{display:flex;flex-wrap:wrap;gap:6px 10px;font-size:var(--step-small);color:var(--muted);margin-bottom:22px;list-style:none;padding:0}
+.crumbs li + li::before{content:"/";margin-right:10px;color:var(--surface-2)}
+.crumbs a{color:var(--muted)}
+.page-head h1{font-size:var(--step-head);font-weight:800;max-width:22ch}
+.page-head .lead{font-size:var(--step-lead);line-height:1.35;max-width:46ch;margin-top:22px;margin-bottom:0}
+
+/* course overview */
+.phase-rows{list-style:none;margin:0 auto;padding-block:0}
+.phase-row{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(12px,2vw,32px);align-items:center;padding-block:clamp(28px,4vw,48px)}
+.phase-row:nth-child(even){background:var(--surface);margin-inline:calc(var(--margin) * -1);padding-inline:var(--margin)}
+.phase-row figure{grid-column:1 / span 5;margin:0}
+.phase-row figure img{width:100%;aspect-ratio:16/9;object-fit:cover;background:var(--surface);transition:transform 500ms var(--ease-out)}
+.phase-row figure{overflow:hidden}
+.phase-row .txt{grid-column:7 / -1}
+.phase-row h2{font-size:clamp(1.9rem,1rem + 2.6vw,3.4rem);margin-bottom:12px}
+.phase-row h2 a{text-decoration:none}
+.phase-row p{color:var(--muted);max-width:48ch}
+.phase-row .row-meta{display:flex;gap:24px;flex-wrap:wrap;align-items:center;font-weight:700}
+@media (hover:hover) and (pointer:fine){.phase-row:hover figure img{transform:scale(1.03)}}
+@media (max-width:820px){.phase-row figure,.phase-row .txt{grid-column:1 / -1}.phase-row .txt{margin-top:20px}}
+
+/* progress meter */
+.meter{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-variant-numeric:tabular-nums}
+.meter .track{width:120px;height:8px;background:var(--surface-2);border-radius:999px;overflow:hidden}
+.meter .fill{display:block;height:100%;background:var(--accent);border-radius:999px;transform-origin:left;transition:transform 600ms var(--ease-out)}
+
+/* phase page */
+.phase-head{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(12px,2vw,32px);align-items:end}
+.phase-head .copy{grid-column:1 / span 6}
+.phase-head h1{font-size:clamp(2.4rem,1rem + 4.6vw,5.5rem);max-width:14ch}
+.phase-head figure{grid-column:8 / -1;margin:0}
+.phase-head figure img{width:100%;aspect-ratio:16/9;object-fit:cover;background:var(--surface)}
+.phase-head .actions{display:flex;flex-wrap:wrap;gap:16px 28px;align-items:center;margin-top:32px}
+@media (max-width:900px){.phase-head .copy,.phase-head figure{grid-column:1 / -1}.phase-head figure{margin-top:32px}}
+.unit{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(12px,2vw,32px);padding-top:clamp(48px,6vw,96px)}
+.unit h2{grid-column:1 / span 4;font-size:clamp(1.6rem,1rem + 1.6vw,2.5rem);align-self:start;position:sticky;top:calc(var(--header-h) + 24px)}
+.unit h2 .of{display:block;font-family:var(--font-text);font-size:var(--step-small);font-weight:400;letter-spacing:0;color:var(--muted);margin-top:10px}
+.lesson-list{grid-column:5 / -1;list-style:none;margin:0;padding:0}
+.lesson-list a{display:grid;grid-template-columns:1fr auto 28px;gap:16px;align-items:center;padding:18px 20px;margin-inline:-20px;text-decoration:none;transition:background-color 160ms ease}
+.lesson-list a:hover{background:var(--surface)}
+.lesson-list .t{font-size:clamp(1.15rem,1rem + 0.5vw,1.45rem);font-weight:700;line-height:1.25}
+.lesson-list .ipa{color:var(--muted);font-size:1rem;white-space:nowrap}
+.lesson-list .state{width:28px;height:28px;border-radius:999px;display:grid;place-items:center;background:var(--surface-2)}
+.lesson-list .done .state{background:var(--ok);color:#fff}
+.lesson-list .state svg{width:16px;height:16px}
+@media (max-width:900px){.unit h2,.lesson-list{grid-column:1 / -1}.unit h2{position:static;margin-bottom:12px}.lesson-list .ipa{display:none}}
+
+/* self-check quiz */
+.check{background:var(--surface);margin-top:var(--gap-section);padding-block:clamp(56px,7vw,112px)}
+.check-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(12px,2vw,32px)}
+.check-intro{grid-column:1 / span 4}
+.check-intro h2{font-size:var(--step-head);margin-bottom:20px}
+.check-intro p{color:var(--muted)}
+.check-intro .score{font-family:var(--font-display);font-size:clamp(2.6rem,1.4rem + 3vw,4.5rem);font-weight:800;letter-spacing:-0.04em;color:var(--ink);margin:24px 0 8px;font-variant-numeric:tabular-nums}
+.qlist{grid-column:6 / -1;list-style:none;margin:0;padding:0;counter-reset:q}
+.qitem{margin-bottom:36px}
+.qitem fieldset{border:0;margin:0;padding:0}
+.qitem legend{font-size:clamp(1.2rem,1rem + 0.6vw,1.6rem);font-weight:700;margin-bottom:14px;padding:0}
+.opts{display:flex;flex-wrap:wrap;gap:10px}
+.opt{position:relative}
+.opt input{position:absolute;opacity:0;inset:0;cursor:pointer;margin:0}
+.opt span{display:inline-flex;align-items:center;gap:8px;min-height:48px;padding:10px 20px;border-radius:999px;background:var(--bg);font-weight:700;transition:background-color 160ms ease,color 160ms ease,transform 140ms var(--ease-out)}
+.opt input:hover + span{background:var(--surface-2)}
+.opt input:focus-visible + span{outline:3px solid var(--accent);outline-offset:3px}
+.opt input:active + span{transform:scale(0.97)}
+.opt.right span{background:var(--ok);color:#fff}
+.opt.wrong span{background:var(--no);color:#fff;animation:nudge 260ms var(--ease-out)}
+.opt svg{width:18px;height:18px}
+@keyframes nudge{0%,100%{transform:none}30%{transform:translateX(-5px)}65%{transform:translateX(4px)}}
+.feedback{min-height:1.6em;margin-top:10px;font-weight:700}
+.feedback.ok{color:var(--ok)}.feedback.no{color:var(--no)}
+@media (max-width:900px){.check-intro,.qlist{grid-column:1 / -1}.qlist{margin-top:32px}}
+
+/* ---------- lesson page ---------- */
+.lesson-layout{display:grid;grid-template-columns:minmax(220px,300px) minmax(0,1fr);gap:clamp(32px,5vw,96px);align-items:start;padding-top:clamp(24px,4vh,56px)}
+.side{overflow-x:hidden;position:sticky;top:calc(var(--header-h) + 16px);max-height:calc(100vh - var(--header-h) - 32px);overflow:auto;padding-bottom:24px;scrollbar-width:thin}
+.side h2{font-family:var(--font-text);font-size:1rem;letter-spacing:0;font-weight:700;margin-bottom:6px}
+.side h2 a{text-decoration:none}
+.side .unit-name{font-size:var(--step-small);color:var(--muted);margin:18px 0 6px}
+.side ol{list-style:none;margin:0;padding:0}
+.side li a{display:flex;gap:10px;align-items:flex-start;padding:7px 10px;margin-inline:-10px;text-decoration:none;font-size:0.98rem;line-height:1.3;border-radius:6px;transition:background-color 140ms ease}
+.side li a:hover{background:var(--surface)}
+.side li a[aria-current="page"]{background:var(--ink);color:var(--bg)}
+.side li .dot{flex:none;width:10px;height:10px;border-radius:999px;margin-top:0.38em;background:var(--surface-2)}
+.side li.done .dot{background:var(--ok)}
+.side li a[aria-current="page"] .dot{background:var(--bg)}
+.side-toggle{display:none}
+@media (max-width:980px){
+  .lesson-layout{grid-template-columns:1fr}
+  .side{position:static;max-height:none;overflow:visible;padding:0}
+  .side-toggle{display:flex;width:100%;justify-content:space-between;align-items:center;background:var(--surface);border:0;padding:14px 18px;min-height:52px;font-weight:700;cursor:pointer}
+  .side-toggle svg{width:20px;height:20px;transition:transform 220ms var(--ease-out)}
+  .side[data-open="true"] .side-toggle svg{transform:rotate(180deg)}
+  .side .side-body{display:none;padding:12px 18px 8px;background:var(--surface)}
+  .side[data-open="true"] .side-body{display:block}
+}
+.article{max-width:74ch;min-width:0}
+.article .crumbs{margin-bottom:18px}
+.article h1{font-size:clamp(2.2rem,1rem + 3.6vw,4.25rem);font-weight:800;letter-spacing:-0.04em}
+.word-line{display:flex;align-items:center;gap:12px;margin-top:16px;color:var(--muted);font-size:var(--step-lead)}
+.article .body{margin-top:clamp(32px,4vw,48px)}
+.article h2{font-size:clamp(1.5rem,1rem + 1.4vw,2.15rem);letter-spacing:-0.025em;margin:2.2em 0 0.7em}
+.article p{max-width:68ch}
+.article p.label{font-weight:700;margin:1.4em 0 0.4em}
+.ex-list{list-style:none;margin:0.4em 0 1.4em;padding:0}
+.ex-list li{display:flex;gap:14px;align-items:center;padding:6px 0}
+.ex-list li span{line-height:1.4}
+.qa{margin:0.2em 0 1.4em;padding:0;list-style:none}
+.qa li{display:flex;gap:14px;align-items:center;padding:4px 0}
+.qa .a{color:var(--muted)}
+.formula{font-family:var(--font-display);font-weight:600;font-size:clamp(1.1rem,1rem + 0.5vw,1.4rem);letter-spacing:-0.01em;background:var(--surface);padding:14px 20px;margin:0.6em 0 1em;line-height:1.35}
+.defs{margin:0.4em 0 1.6em}
+.defs .row{display:grid;grid-template-columns:36px minmax(9em,0.8fr) 2fr;gap:14px;align-items:center;padding:10px 0}
+.defs dt{font-weight:700}
+.defs dd{margin:0;color:var(--muted)}
+@media (max-width:600px){.defs .row{grid-template-columns:36px 1fr}.defs dd{grid-column:2}}
+.words{display:flex;flex-wrap:wrap;gap:8px;margin:0.6em 0 1.6em;padding:0;list-style:none}
+.words button{display:inline-flex;align-items:center;gap:8px;border:0;background:var(--surface);border-radius:999px;padding:8px 16px 8px 12px;min-height:44px;cursor:pointer;font-weight:700;transition:background-color 160ms ease,transform 140ms var(--ease-out)}
+.words button:hover{background:var(--surface-2)}
+.words button:active{transform:scale(0.96)}
+.words button svg{width:16px;height:16px;color:var(--accent)}
+.words button[aria-pressed="true"]{background:var(--accent);color:#fff}
+.words button[aria-pressed="true"] svg{color:#fff}
+.letters{display:grid;grid-template-columns:repeat(auto-fill,minmax(64px,1fr));gap:8px;margin:0.6em 0 2em;list-style:none;padding:0}
+.letters button{aspect-ratio:1;width:100%;border:0;background:var(--surface);font-family:var(--font-display);font-weight:800;font-size:1.9rem;cursor:pointer;transition:background-color 160ms ease,transform 140ms var(--ease-out),color 160ms ease}
+.letters button span{font-family:var(--font-text);font-weight:400;font-size:0.95rem;color:var(--muted)}
+.letters button:hover{background:var(--surface-2)}
+.letters button:active{transform:scale(0.94)}
+.letters button[aria-pressed="true"]{background:var(--accent);color:#fff}
+.letters button[aria-pressed="true"] span{color:var(--field-muted)}
+.note{background:var(--ink);color:var(--bg);padding:18px 22px;margin:1em 0 1.6em;display:flex;gap:14px;align-items:flex-start}
+.note svg{flex:none;width:22px;height:22px;margin-top:2px;color:#9DB8EE}
+.note p{margin:0}
+.pair{display:flex;gap:12px;align-items:center;padding:10px 16px;margin:6px 0;font-weight:700}
+.pair.ok{background:var(--ok-bg);color:var(--ok)}
+.pair.no{background:var(--no-bg);color:var(--no)}
+.pair.no span{text-decoration:line-through;text-decoration-thickness:2px}
+.pair svg{width:20px;height:20px;flex:none}
+.article figure{margin:1.4em 0 1.8em}
+.article figure button{display:block;width:100%;padding:0;border:0;background:var(--surface);cursor:zoom-in}
+.article figure img{width:100%;height:auto;max-height:78vh;min-height:120px;object-fit:contain}
+.img-off{background:var(--surface);padding:22px 24px;display:flex;flex-direction:column;gap:6px;justify-content:center;min-height:140px}
+.img-off strong{font-size:1.1rem}
+.img-off a{font-size:var(--step-small);font-weight:700}
+.listen-figure.off,.big-figure.off{aspect-ratio:4/3}
+.big-figure.off{aspect-ratio:16/10}
+.listen-figure.off .img-off,.big-figure.off .img-off{height:100%;background:var(--accent);color:#fff}
+.listen-figure.off .img-off a,.big-figure.off .img-off a{color:#fff}
+.listen-figure.off .img-off .ipa-big,.big-figure.off .img-off .ipa-big{font-family:var(--font-ipa);font-size:clamp(3rem,2rem + 4vw,6rem);line-height:1;margin-bottom:12px}
+.article figcaption{font-size:var(--step-small);color:var(--muted);margin-top:8px}
+.cards{list-style:none;margin:1em 0 2em;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,230px),1fr));gap:20px 18px}
+.cards.vocab{grid-template-columns:repeat(auto-fill,minmax(min(100%,170px),1fr))}
+.cards li{min-width:0}
+.cards button.zoom{display:block;width:100%;padding:0;border:0;background:var(--surface);cursor:zoom-in;overflow:hidden}
+.cards img{width:100%;aspect-ratio:4/3;object-fit:cover;transition:transform 500ms var(--ease-out)}
+@media (hover:hover) and (pointer:fine){.cards button.zoom:hover img{transform:scale(1.04)}}
+.cards p{display:flex;gap:10px;align-items:center;margin:10px 0 0;font-weight:700;line-height:1.3}
+.cards.vocab p{font-size:1.05rem}
+.table-wrap{overflow-x:auto;margin:0.8em 0 1.8em}
+table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums;font-size:1rem}
+th{text-align:left;font-weight:700;padding:10px 14px;background:var(--ink);color:var(--bg)}
+td{padding:10px 14px;vertical-align:top;border-bottom:1px solid var(--surface-2)}
+tr:nth-child(even) td{background:color-mix(in srgb,var(--surface) 55%,transparent)}
+td .cell{display:flex;gap:10px;align-items:center}
+td .say{width:30px;height:30px}
+td .say svg{width:15px;height:15px}
+.media{margin:1.2em 0 1.8em}
+.media .frame{position:relative;width:100%;aspect-ratio:16/9;background:var(--ink)}
+.media.audio .frame{aspect-ratio:auto;height:120px;max-width:560px;background:var(--surface)}
+.media iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.media .play{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;width:100%;border:0;background:var(--ink);color:#fff;cursor:pointer;font-weight:700;font-size:1.05rem;text-decoration:none;transition:background-color 160ms ease}
+.media .play:hover{background:#1A2C47}
+.media .play .disc{width:64px;height:64px;border-radius:999px;background:var(--accent);display:grid;place-items:center;transition:transform 180ms var(--ease-out)}
+.media .play:active .disc{transform:scale(0.94)}
+.media .play svg{width:26px;height:26px}
+.media.audio .play{flex-direction:row;justify-content:flex-start;padding:0 24px;background:var(--surface);color:var(--ink)}
+.media.audio .play:hover{background:var(--surface-2)}
+.media.audio .play .disc{width:52px;height:52px;color:#fff}
+.media .cap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:var(--step-small);color:var(--muted);margin-top:8px}
+.lesson-foot{margin-top:clamp(56px,7vw,96px)}
+.done-btn{display:inline-flex;align-items:center;gap:12px;min-height:52px;padding:12px 24px 12px 16px;border:0;border-radius:999px;background:var(--surface);font-weight:700;font-size:1.05rem;cursor:pointer;transition:background-color 200ms ease,color 200ms ease,transform 140ms var(--ease-out)}
+.done-btn:active{transform:scale(0.97)}
+.done-btn .box{width:28px;height:28px;border-radius:999px;background:var(--bg);display:grid;place-items:center;transition:background-color 200ms ease}
+.done-btn svg{width:16px;height:16px;stroke-dasharray:24;stroke-dashoffset:24;transition:stroke-dashoffset 320ms var(--ease-out) 60ms}
+.done-btn[aria-pressed="true"]{background:var(--ok);color:#fff}
+.done-btn[aria-pressed="true"] .box{background:#fff;color:var(--ok)}
+.done-btn[aria-pressed="true"] svg{stroke-dashoffset:0}
+.pager{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:40px}
+.pager a{display:block;text-decoration:none;padding:20px 22px;background:var(--surface);transition:background-color 160ms ease}
+.pager a:hover{background:var(--surface-2)}
+.pager .dir{display:block;font-size:var(--step-small);color:var(--muted);margin-bottom:6px}
+.pager .ttl{font-family:var(--font-display);font-weight:700;font-size:1.25rem;letter-spacing:-0.02em;line-height:1.2}
+.pager .next{text-align:right;grid-column:2}
+@media (max-width:600px){.pager{grid-template-columns:1fr}.pager .next{grid-column:1}}
+
+/* assistant page */
+.assistant-layout{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(12px,2vw,32px);row-gap:32px}
+.assistant-layout .copy{grid-column:1 / span 4}
+.assistant-layout .copy ol{padding-left:1.2em;margin:0 0 1.4em}
+.assistant-layout .copy li{margin-bottom:10px}
+.assistant-layout .chat{grid-column:5 / -1}
+.chat .frame{width:100%;height:min(78vh,820px);background:var(--surface);position:relative}
+.chat iframe{width:100%;height:100%;border:0;display:block}
+.chat .empty{position:absolute;inset:0;display:grid;place-content:center;text-align:center;padding:32px;gap:12px}
+.chat .empty strong{font-family:var(--font-display);font-size:1.6rem;letter-spacing:-0.02em}
+.chat .bar{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:14px}
+@media (max-width:980px){.assistant-layout .copy,.assistant-layout .chat{grid-column:1 / -1}}
+
+/* lightbox */
+dialog.lightbox{border:0;padding:0;background:transparent;max-width:min(96vw,1400px);max-height:94vh;overflow:visible}
+dialog.lightbox::backdrop{background:rgba(14,27,46,.82)}
+dialog.lightbox[open]{animation:pop 240ms var(--ease-out)}
+dialog.lightbox img{max-width:min(96vw,1400px);max-height:86vh;object-fit:contain;background:#fff}
+dialog.lightbox .close{position:absolute;top:-56px;right:0;background:#fff;color:var(--ink);border:0;border-radius:999px;min-height:44px;padding:8px 18px;font-weight:700;cursor:pointer}
+dialog.lightbox p{color:#fff;margin:10px 0 0;font-size:var(--step-small)}
+@keyframes pop{from{opacity:0;transform:scale(0.96)}to{opacity:1;transform:none}}
+
+/* about page */
+.prose{max-width:68ch}
+.prose h2{font-size:clamp(1.6rem,1rem + 1.6vw,2.5rem);margin:2em 0 0.6em}
+.team-card{display:grid;grid-template-columns:180px 1fr;gap:28px;align-items:start;margin-top:12px}
+.team-card img{width:180px;aspect-ratio:1;object-fit:cover;background:var(--surface)}
+@media (max-width:600px){.team-card{grid-template-columns:1fr}}
+.empty-state{padding-block:clamp(64px,10vw,160px)}
+.empty-state h1{font-size:var(--step-head)}
+
+@media (prefers-reduced-motion:reduce){
+  .view > *{animation:fade 200ms ease both;animation-delay:0ms}
+  .reveal{transform:none;transition:opacity 300ms ease}
+  .reel img{transition:opacity 400ms ease;transform:none}
+  .bars rect{animation:none}
+  @keyframes fade{from{opacity:0}to{opacity:1}}
+  dialog.lightbox[open]{animation:fade 160ms ease}
+  .opt.wrong span{animation:none}
+  .phase-row figure img{transition:none}
+}
+@media print{.site-header,.side,.say,.pager,.done-btn,.site-footer{display:none}.lesson-layout{display:block}}
+.ai-band .chip{border-radius:14px;text-align:left;line-height:1.35;padding:10px 16px}
+@media (max-width:900px){main{padding-bottom:84px}}
+
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="wordmark" href="#">Basic English <span class="ipa">/ˈbeɪ.sɪk ˈɪŋ.ɡlɪʃ/</span></a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="#" data-nav="home">Assistant</a>
+      <a href="#course" data-nav="course">Lessons</a>
+      <a href="#about" data-nav="about">About</a>
+    </nav>
+  </div>
+</header>
+<main id="main" tabindex="-1">
+  <noscript><div class="wrap" style="padding:80px 0"><h1>Basic English</h1><p>This course needs JavaScript to show its lessons. Please enable it in your browser.</p></div></noscript>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <p class="name" aria-hidden="true">Basic English</p>
+    <div class="cols">
+      <div>
+        <h2>Basic English</h2>
+        <p>Virtual Assistance Tool to Support the Basic English Language Skills of English Major Students at Universidad Tecnológica de El Salvador.</p>
+      </div>
+      <div>
+        <h2>Course</h2>
+        <ul><li><a href="#phase-1">Module 1: Foundations</a></li><li><a href="#phase-2">Module 2: The past</a></li><li><a href="#phase-3">Module 3: The future</a></li><li><a href="#phase-4">Module 4: Longer sentences</a></li></ul>
+      </div>
+      <div>
+        <h2>Project</h2>
+        <ul><li><a href="#">AI assistant</a></li><li><a href="#about">About the team</a></li></ul>
+      </div>
+    </div>
+    <p class="fine">Universidad Tecnológica de El Salvador · 2026. Lesson pictures, audio and video by the project team. Photographs from Unsplash.</p>
+  </div>
+</footer>
+<button class="ai-fab" id="ai-fab" type="button" aria-expanded="false" aria-controls="ai-panel"><span class="ai-dot" aria-hidden="true"></span><span class="ai-fab-label">Ask the assistant</span></button>
+<aside class="ai-panel" id="ai-panel" aria-label="English Assistant" inert>
+  <div class="ai-bar">
+    <span class="ai-ctx"></span>
+    <button class="ai-expand" type="button" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 4h5v5M9 20H4v-5M20 4l-6 6M4 20l6-6"/></svg><span>Expand</span></button>
+    <button class="ai-close" type="button" aria-label="Close the assistant"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+  </div>
+  <div class="ai-slot"></div>
+</aside>
+<dialog class="lightbox" id="lightbox" aria-label="Enlarged image">
+  <button class="close" type="button">Close</button>
+  <img alt="" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=">
+  <p></p>
+</dialog>
+<script>
+/* Images live next to index.html in the images/ folder (exported from the original Google Site). */
+function imgUrl(ref) {
+  const [set, i] = ref.split('.');
+  return 'images/' + (i === undefined ? set : set + '-' + String(i).padStart(2, '0')) + '.webp';
+}
+
+/* Course content. Line syntax inside `body`:
+   ## sub-heading · p paragraph · - example (tap to listen) · f structure formula
+   img set.i | alt · video DRIVE_ID | title · audio DRIVE_ID | title
+   t header | cells · r row | cells · d term | definition · w comma, separated, words
+   n remember note · ok correct · no incorrect · q question | answer · letters
+   c set.i | sentence  (picture card with a listen button; consecutive lines form a grid) */
+
+const CONFIG = {
+  // Address of the English Assistant. Leave it empty ('') to hide the assistant.
+  assistantUrl: 'https://asistente-ingles.english-assitants.workers.dev',
+  university: 'Universidad Tecnológica de El Salvador',
+  year: '2026'
+};
+
+const COURSE = [
+{
+  id: 'phase-1', n: 1, title: 'Foundations', short: 'Foundations',
+  line: 'First, the foundations.',
+  lead: 'The alphabet, the verb to have, places, routines and quantities: everything you need for your first conversations.',
+  quiz: 'https://share.gemini.google/8ABJ7MDpMPhV',
+  cover: 'u.cover1',
+  units: [
+    { title: 'Me and my world', lessons: ['alphabet','pronouns','ipa','adjectives','nationalities','wh-questions','professions'] },
+    { title: 'What I have', lessons: ['have-has','there-is-there-are','family','possessions','personal-information'] },
+    { title: 'Places and routines', lessons: ['prepositions-of-place','home','places-in-town','simple-present','daily-routines','simple-past','can-cant','imperatives'] },
+    { title: 'How much and right now', lessons: ['countable-uncountable','quantifiers','present-continuous','past-time-expressions-1'] }
+  ],
+  check: [
+    { q: 'She ___ long hair.', o: ['have','has','is'], a: 1 },
+    { q: 'There ___ three chairs in the kitchen.', o: ['is','are','am'], a: 1 },
+    { q: 'How ___ water do you drink every day?', o: ['many','much','few'], a: 1 },
+    { q: 'He ___ play the guitar.', o: ['can','cans','can to'], a: 0 },
+    { q: 'I am ___ English right now.', o: ['study','studied','studying'], a: 2 },
+    { q: 'Did you ___ your family yesterday?', o: ['visit','visited','visiting'], a: 0 }
+  ]
+},
+{
+  id: 'phase-2', n: 2, title: 'Expansion of the past and descriptions', short: 'The past and descriptions',
+  line: 'Then, stories in the past.',
+  lead: 'Talk about the past, describe people and places, compare things and give advice.',
+  quiz: 'https://share.gemini.google/m1s1CWJJJic3',
+  intro: { video: '1rPV3el3F2yYPG98WruLgWMziKW0XKYM-', title: 'Welcome to Module 2' },
+  cover: 'u.cover2',
+  units: [{ title: '', lessons: ['past-simple','past-time-expressions','past-continuous','comparatives','modal-verbs'] }],
+  check: [
+    { q: 'I ___ to the beach last weekend.', o: ['go','went','gone'], a: 1 },
+    { q: 'She didn’t ___ TV last night.', o: ['watch','watched','watching'], a: 0 },
+    { q: 'I was sleeping ___ my phone rang.', o: ['while','when','during'], a: 1 },
+    { q: 'Mount Everest is ___ mountain in the world.', o: ['the higher','the highest','the most high'], a: 1 },
+    { q: 'You ___ smoke here. It is not allowed.', o: ['mustn’t','don’t have to','should'], a: 0 },
+    { q: 'You look tired. You ___ go to bed early.', o: ['should','mustn’t','have'], a: 0 }
+  ]
+},
+{
+  id: 'phase-3', n: 3, title: 'Future plans and life experiences', short: 'The future and experiences',
+  line: 'Next, plans for the future.',
+  lead: 'Plans with be going to, arrangements with the present continuous, decisions with will, and experiences with the present perfect.',
+  quiz: 'https://share.gemini.google/PqBoxl6WkrEL',
+  intro: { video: '1dNukqxNUcnzXFwqr3Rhw8u9TrgnxQtlE', title: 'An overview of Module 3' },
+  cover: 'u.cover3',
+  units: [{ title: '', lessons: ['going-to','present-continuous-future','will','present-perfect'] }],
+  check: [
+    { q: 'Look at those clouds. It ___ rain.', o: ['is going to','will to','goes to'], a: 0 },
+    { q: 'I ___ my dentist at 4 p.m. tomorrow. It’s booked.', o: ['meet','am meeting','met'], a: 1 },
+    { q: 'The phone is ringing. I ___ get it!', o: ['will','am going','going to'], a: 0 },
+    { q: 'She ___ here for three years.', o: ['has lived','have lived','lived since'], a: 0 },
+    { q: 'Have you ___ that movie?', o: ['see','saw','seen'], a: 2 },
+    { q: 'Won’t is the short form of ___.', o: ['want not','will not','would not'], a: 1 }
+  ]
+},
+{
+  id: 'phase-4', n: 4, title: 'Conditionals, verb patterns and the passive', short: 'Longer sentences',
+  line: 'Finally, longer sentences.',
+  lead: 'Real possibilities with the first conditional, verb patterns, relative clauses and the passive voice.',
+  quiz: '',
+  intro: { video: '1Kpxb5udIkUgF2H-F9Ls5QJFZmkiq4xAj', title: 'Welcome to Module 4' },
+  cover: 'u.cover4',
+  units: [{ title: '', lessons: ['first-conditional','verb-patterns','relative-clauses','passive-voice'] }],
+  check: [
+    { q: 'If I study, I ___ my exams.', o: ['pass','will pass','passed'], a: 1 },
+    { q: 'If we ___ now, we will arrive on time.', o: ['leave','will leave','left'], a: 0 },
+    { q: 'I enjoy ___ in the ocean.', o: ['to swim','swimming','swim'], a: 1 },
+    { q: 'He decided ___ the party early.', o: ['leaving','to leave','leave'], a: 1 },
+    { q: 'I met the person ___ won the competition.', o: ['which','where','who'], a: 2 },
+    { q: 'The mistakes ___ corrected by the teacher.', o: ['was','were','are being'], a: 1 }
+  ]
+}
+];
+
+const LESSONS = {
+
+/* ---------- PHASE 1 · UNIT 1 ---------- */
+'alphabet': { title: 'The English alphabet', ipa: '/ˈæl.fə.bet/', body: `
+p The English alphabet has 26 letters, from A to Z. Each letter has a name and can represent one or more sounds, called phonemes. Learning the alphabet and its sounds helps you improve your pronunciation, spelling, reading and speaking.
+## Tap a letter to hear its name
+letters
+img m1.0 | The 26 letters of the English alphabet with their sounds
+`},
+'pronouns': { title: 'Personal pronouns', ipa: '/ˈprəʊ.naʊnz/', body: `
+p Pronouns replace nouns. We use them to talk about people and things that we already mentioned. They show person (first, second, third), number (one or more) and gender.
+t Person | Singular | Plural
+r First | I | we
+r Second | you | you
+r Third | he, she, it | they
+p Each pronoun has a subject form, an object form, a possessive adjective and a possessive pronoun. The chart and the video show how to use them.
+img m1.1 | The personal pronouns: I, you, he, she, it, we, they
+img m1.2 | The verb to be with each pronoun: I am, you are, he is
+video 15Y3kXVwCDgn7zWC-gpP_dnTn7Meb01sj | Video: personal pronouns
+`},
+'ipa': { title: 'The International Phonetic Alphabet (IPA)', ipa: '/ˌaɪ.piːˈeɪ/', body: `
+p The International Phonetic Alphabet is a system of symbols that shows how words are pronounced. Dictionaries use it next to every word, so once you can read it, you can pronounce any new word.
+p Listen to the pronunciation of each phonetic sound for vowels and consonants.
+img m1.3 | IPA chart of English vowel and consonant sounds
+audio 1AMCyvixgx3P6QshY6V5_3p1B9xL8eiB4 | Audio: the sounds of the IPA
+`},
+'adjectives': { title: 'Adjectives', ipa: '/ˈædʒ.ek.tɪvz/', body: `
+p Adjectives are words that describe a noun or a pronoun.
+## Positive words
+d beautiful | very nice to look at
+d nice | pleasant and good
+d great | very good
+d cool | modern and popular
+d clean | simple, with not too many things
+d bright | with a lot of light or colour
+d colorful | with many different colours
+d new | not old
+## Negative words
+d bad | not good
+d old | from a long time ago
+d dark | with no light; black or grey
+d boring | not interesting
+d blurry | not clear; hard to see
+## Easy examples
+- My Facebook photo is beautiful.
+- I want a new cover image.
+- The photo is too dark.
+`},
+'nationalities': { title: 'Countries and nationalities', ipa: '/ˌnæʃ.əˈnæl.ə.tiz/', body: `
+p Let's practice countries and nationalities with a short text about El Salvador.
+img m1.4 | Countries, flags and nationalities
+## Interesting facts about El Salvador
+- El Salvador is the smallest country in Central America, and it is known as the Land of Volcanoes.
+- One interesting fact about my country is that pupusas are our national dish.
+- Another fascinating place is Joya de Cerén, an ancient village preserved by volcanic ash.
+- El Salvador is also famous for its beautiful beaches and surfing spots.
+- Despite being a small country, El Salvador has a rich culture, delicious food and beautiful natural landscapes.
+## Say where you are from
+- I am from El Salvador. I am Salvadoran.
+`},
+'wh-questions': { title: 'Wh- questions', ipa: '/ˈdʌb.əl.juː eɪtʃ ˈkwes.tʃənz/', body: `
+p Wh- questions ask for information. The answer is never just yes or no.
+d what | asks for information about something
+q What is your name? | My name is Anna.
+d why | asks for a reason or a cause
+q Why did you drink my coffee? | I did not drink it.
+d when | asks about time
+q When are they leaving? | They are leaving at 9:00 p.m.
+d which | asks about a choice
+q Which door do you want me to open? | I want you to open the brown one.
+d who | asks about the person who does the action
+q Who will win this game? | Maria will win the game.
+d whom | asks about the person who receives the action (formal)
+q Whom should we ask now? | You should ask your manager.
+d where | asks about a place
+q Where are you going? | I'm going to the gym.
+d whose | asks about possession
+q Whose pencil is this? | It is mine.
+d how | asks about the way or the process
+q How did you get my number? | I asked your sister for it.
+`},
+'professions': { title: 'Professions', ipa: '/prəˈfeʃ.ənz/', body: `
+p Let's learn some professions! Tap a word to hear it.
+w architect, botanist, chef, astronaut, firefighter, violinist, marine biologist, airline pilot, software developer, landscape painter, pediatrician, construction engineer
+img m1.5 | Illustrations of twelve professions
+## Talk about jobs
+- What do you do? I am a software developer.
+- She is a pediatrician.
+`},
+
+/* ---------- PHASE 1 · UNIT 2 ---------- */
+'have-has': { title: 'Have and has', ipa: '/hæv ənd hæz/', body: `
+p Have and has express possession, and they also form part of other verb phrases. Use have with I, you, we and they. Use has with he, she and it.
+f I / you / we / they + have
+f he / she / it + has
+c u.hh_car | I have a car.
+c u.hh_smile | You have a nice smile.
+c u.hh_house | We have a house.
+c u.hh_exam | They have an exam today.
+c u.hh_bike | He has a bike.
+c u.hh_hair | She has long hair.
+c u.hh_tail | It has a tail.
+`},
+'there-is-there-are': { title: 'There is and there are', ipa: '/ðeər ɪz, ðeər ɑːr/', body: `
+p Use there is with singular or uncountable nouns, and there are with plural nouns. For example: There is a park near my house (singular). There are three chairs in the kitchen (plural).
+img m1.13 | There is and there are with examples
+## There is
+- There is a book on the table.
+- There is a cat in the garden.
+- There is milk in the fridge.
+- There is a problem we need to solve.
+- There is a new student in the class.
+p Negative form
+- There isn't any sugar left.
+- There isn't a good reason to wait.
+p Questions
+- Is there a bathroom here?
+- Is there a bus to the city centre?
+## There are
+- There are two dogs outside.
+- There are many people at the park.
+- There are three messages in your inbox.
+- There are several options to choose from.
+p Negative form
+- There aren't any chairs in the room.
+- There aren't enough plates for everyone.
+p Questions
+- Are there any apples left?
+- Are there good restaurants nearby?
+n Milk is uncountable, so we say there is milk, not there are milk.
+`},
+'family': { title: 'Family', ipa: '/ˈfæm.əl.i/', body: `
+p A family is a group of people united by marriage, blood or adoption. They form a single household and interact with each other as spouses, parents, children and siblings.
+img u.family | A family having dinner together
+## Examples
+- This is my mother.
+- He is my father.
+- She is my sister.
+- I have one brother.
+## Simple "I have" sentences
+- I have two sisters.
+- I have one brother.
+- I have a big family.
+- I have many cousins.
+## Describing family members
+- My mother is kind.
+- My father is strong.
+- My sister is funny.
+- My brother is tall.
+img m1.15 | A family tree with vocabulary for family members
+## Short paragraphs
+p My family. My family is small. I live with my mother, father and sister. My mother cooks food for us. My father works in an office. My sister and I go to school. We are a happy family.
+p My parents. My parents are very caring. My mother likes to read books. My father likes to play soccer. They help me learn new things. I love my parents very much.
+p A big family. I have a big family. I live with my parents, two brothers and my grandmother. On Sundays, we visit my aunts, uncles and cousins. We eat together and talk. I enjoy spending time with my family.
+`},
+'possessions': { title: 'Possessions', ipa: '/pəˈzeʃ.ənz/', body: `
+p Possessions are the things that you own: your personal belongings.
+img m1.16 | Everyday personal possessions
+## Personal possessions
+d phone | This is my phone.
+d keys | Where are my keys?
+d wallet / purse | I have money in my wallet.
+d watch | He wears a nice watch.
+d glasses / sunglasses | I need my glasses to read.
+d bag / backpack | Her bag is red.
+## Classroom and school objects
+d pen and pencil | Do you have a pencil?
+d book / notebook | Open your book to page 5.
+d eraser | Can I borrow your eraser?
+d ruler | Draw a line with a ruler.
+d scissors | Be careful with the scissors.
+## Household objects
+d bed | My bed is very comfortable.
+d lamp | Turn on the lamp, please.
+d chair and table | Sit on the chair at the table.
+d clock | Look at the clock; it is late.
+d mirror | She looks in the mirror.
+## Grammar practice
+p To talk about possessions, A1 learners practise with have / has and the verb to be (is / are).
+- I have a new backpack.
+- She has a red pen.
+q Do you have a car? | Yes, I do. / No, I don't.
+q Whose pen is this? | It is mine. / It is John's.
+`},
+'personal-information': { title: 'Personal information', ipa: '/ˈpɜː.sən.əl ˌɪn.fəˈmeɪ.ʃən/', body: `
+p Essential questions and answers to introduce yourself.
+t Topic | Question | Example answer
+r Name | What is your name? What is your surname? | My name is Anna. My surname is Smith.
+r Age | How old are you? | I am 25 years old.
+r Nationality | Where are you from? | I am from El Salvador. I am Salvadoran.
+r Address | Where do you live? What is your address? | I live in London. My address is 12 Green Street.
+r Job | What do you do? What is your job? | I am a student. I am a teacher.
+r Hobbies | What are your hobbies? What do you like doing? | My hobbies are reading and swimming. I like playing football.
+`},
+
+/* ---------- PHASE 1 · UNIT 3 ---------- */
+'prepositions-of-place': { title: 'Prepositions of place', ipa: '/ˌprep.əˈzɪʃ.ənz əv pleɪs/', body: `
+p Prepositions of place show where someone or something is located.
+img m1.17 | Prepositions of place shown with a box and a ball
+t Preposition | Use | Example
+r in | inside a space, room, city or country | My keys are in my pocket.
+r on | on a flat surface, a street or a line | The book is on the table.
+r at | a specific point, address or event | He is waiting at the bus stop.
+r under / below | lower than or directly beneath | The cat is under the sofa.
+r above / over | higher than something | The clock is above the door.
+r next to / beside | at the side of something | The shop is next to the post office.
+r between | in the middle of two things | The ball is between the two shoes.
+r behind | at the back of something | The car is parked behind the gate.
+r in front of | facing the front of something | The dog is sitting in front of the door.
+r near / close to | at a short distance | The park is near the school.
+`},
+'home': { title: 'Home', ipa: '/həʊm/', body: `
+p Let's practise the vocabulary for each room of the house. Listen to the audio and repeat each word.
+## Kitchen
+img m1.18 | Kitchen vocabulary
+audio 1KOq2UUJ5u1ZhFc3miYLkngk_IyPHXdIE | Audio: kitchen vocabulary
+## Living room
+img m1.19 | Living room vocabulary
+audio 1Jq9XZawjDnRDt2C0sOY_Qx904S3ZaB2p | Audio: living room vocabulary
+## Bedroom
+img m1.20 | Bedroom vocabulary
+## Bathroom
+img m1.21 | Bathroom vocabulary
+`},
+'places-in-town': { title: 'Places in town', ipa: '/ˈpleɪ.sɪz ɪn taʊn/', body: `
+p Learn the names of the places you visit in your town or city.
+img m1.22 | A town map with its main places
+w school, library, fire station, police station, hospital, supermarket, bank, post office, train station, park, cinema, gym and leisure centre
+- The library is next to the school.
+- There is a bank near the park.
+`},
+'simple-present': { title: 'The simple present', ipa: '/ˈsɪm.pəl ˈprez.ənt/', body: `
+p We use the simple present to talk about habits, routines, facts and things that happen regularly.
+## Affirmative
+f Subject + verb + complement
+p With he, she and it, we usually add -s or -es to the verb.
+- I work every day.
+- You travel to different countries.
+- He plays soccer.
+- She studies English.
+- It works well.
+- We cook dinner.
+- They speak French.
+## Negative
+f Subject + do not (don't) / does not (doesn't) + base verb + complement
+- I do not work every day.
+- You do not travel to different countries.
+- He does not play soccer.
+- She does not study English.
+- It does not work well.
+- We do not cook dinner.
+- They do not speak French.
+## Questions
+f Do / Does + subject + base verb + complement?
+- Do I work every day?
+- Do you travel to different countries?
+- Does he play soccer?
+- Does she study English?
+- Does it work well?
+- Do we cook dinner?
+- Do they speak French?
+## Bonus: a first look at the future with will
+f Subject + will + base verb + complement
+- I will help you with your homework.
+- She will call you later.
+- They will win the match tomorrow.
+- He will pass the English exam.
+f Subject + will not (won't) + base verb + complement
+- I will not help you with your homework.
+- She will not call you later.
+f Will + subject + base verb + complement?
+- Will you help me with my homework?
+- Will she call you later?
+- Will they win the match tomorrow?
+n You will study will in depth in Module 3.
+`},
+'daily-routines': { title: 'Daily routines', ipa: '/ˈdeɪ.li ruːˈtiːnz/', body: `
+p A routine is what you do every day. Learn the actions for each part of the day.
+## Morning routine
+d wake up / get up | to stop sleeping; to get out of bed
+d take a shower / wash your face | to clean yourself
+d brush your teeth | to clean your teeth with a toothbrush
+d get dressed | to put on your clothes
+d comb / brush your hair | to tidy your hair
+d have breakfast | to eat the first meal of the day
+d leave the house / go to work / go to school | to start your journey for the day
+## Afternoon routine
+d start work / classes | to begin your daily tasks or lessons
+d have lunch | to eat your midday meal
+d finish work / school | to complete your work or classes for the day
+d go home | to return to your house
+d do the shopping | to buy food or household items
+## Evening routine
+d arrive home | to get back to your house
+d cook dinner / have dinner | to prepare and eat your evening meal
+d relax / watch TV | to rest or watch shows in the evening
+d read a book | to read for pleasure
+d do homework | to complete school assignments
+d go to bed / fall asleep | to get into bed and go to sleep for the night
+img m1.24 | Daily routine actions from morning to night
+## Examples
+- I wake up at 7:00 a.m. every morning.
+- After getting out of bed, I wash my face with cold water.
+- I brush my teeth twice a day to keep them clean.
+- Next, I get dressed in my school clothes.
+- I have breakfast with my family in the kitchen.
+- I go to school by bus with my friends.
+- My mother sits at her desk and starts work at 9:00 a.m.
+- At noon, we have lunch in the park.
+- In the afternoon, I do homework at my desk.
+- After school, the children play with friends outside.
+- In the evening, we all have dinner together at 7:30 p.m.
+- Finally, I go to bed early so I am not tired tomorrow.
+img m1.25 | Modern hobbies with their names
+## Hobbies
+d playing the electric guitar | I play my electric guitar in the evening. It is very loud.
+d music production | He works on music production on his laptop. He makes new songs.
+d learning | The woman loves learning. She reads many books about history.
+d creative thinking | Creative thinking helps me solve problems. I think of new ideas.
+d coding | The man is coding a new website. It is difficult work.
+d photography | I enjoy photography. I take many photos of nature with my camera.
+d content creation | They are good at content creation. They record a new video for their vlog.
+d podcast hosting | She is a podcast host. She interviews interesting people every week.
+d urban gardening | I have a small urban garden on my balcony. I grow fresh vegetables.
+d specialty coffee brewing | We love specialty coffee brewing. We make delicious coffee every morning.
+d board gaming | On Sundays, I play board games with my friends. It is a lot of fun.
+`},
+'simple-past': { title: 'The simple past', ipa: '/ˈsɪm.pəl pɑːst/', body: `
+p We use the simple past for actions that started and finished in the past.
+## Affirmative
+f Subject + verb in the past + complement
+- I visited my family yesterday.
+- She played soccer last weekend.
+- They bought a new house.
+- He watched the movie last night.
+## Negative
+f Subject + did not (didn't) + base verb + complement
+- I did not visit my family yesterday.
+- She did not play soccer last weekend.
+- They did not buy a new house.
+- We did not go to the park this morning.
+## Questions
+f Did + subject + base verb + complement?
+- Did you visit your family yesterday?
+- Did she play soccer last weekend?
+- Did they buy a new house?
+- Did he watch the movie last night?
+`},
+'can-cant': { title: 'Can and can’t', ipa: '/kæn, kɑːnt/', body: `
+video 1YUi8GmqJz-9Nexv3cN-YbnkW-QxPujlu | Video: modern hobbies with can and can't
+p The modal verb can has the same form for all subjects: I, you, he, she, it, we and they. After can and can't, we use the base form of the verb, without to and without -s.
+p We use can for abilities and possibilities, and can't when someone does not have an ability or something is not possible. They help us describe our skills, ask for help and explain what we can do.
+img m1.27 | Can and can't for abilities
+## Structure
+f Subject + can + base verb
+- I can speak English.
+f Subject + can't + base verb
+- I can't drive a car.
+f Can + subject + base verb?
+- Can you use a computer?
+## Remember
+ok She can speak English.
+no She can speaks English.
+ok He can't drive.
+no He can't to drive.
+img m1.28 | Examples of can and can't
+## Examples by situation
+d languages | I can understand basic English.
+d technology | She can use presentation software.
+d academic skills | We can work in groups.
+d personal abilities | He can play the guitar.
+d limitations | I can't attend the meeting today.
+d asking a classmate | Can you help me with this exercise?
+## Vocabulary: abilities and everyday actions
+img m1.29 | Study and technology verbs
+p Study and technology
+w read, write, type, search online, download, upload, present, research
+img m1.30 | Communication verbs
+p Communication
+w ask, answer, explain, repeat, discuss, listen, speak, collaborate
+img m1.31 | Personal ability verbs
+p Personal abilities
+w swim, cook, dance, drive, sing, draw, play an instrument
+## More examples
+- I can speak Spanish and a little English.
+- She can use online learning platforms.
+- He can understand simple instructions.
+- We can work together on a university project.
+- They can't attend the meeting today.
+- My friend can't pronounce some English words correctly yet.
+## Requests
+- Can you explain it?
+- Can you speak slowly?
+- Can I borrow your pen?
+- Can I go to the bathroom?
+- Can you repeat that?
+- Can you help me?
+audio 18kr81VHK50NNUxdhYm6FG9JHDCR9IOXr | Audio: can and can't
+n Can = you are able to do something. Can't = you are not able to do something.
+`},
+'imperatives': { title: 'Imperatives', ipa: '/ɪmˈper.ə.tɪvz/', body: `
+p We use the imperative to tell someone directly to do, or not to do, something. Imperatives give instructions, directions, commands or suggestions. They are common in classrooms, university activities and everyday situations.
+video 1jKQ3nd-G6PK_MI91BKRD3cQAT6kdnFWj | Video: imperatives
+## Affirmative: the base form of the verb
+- Open your notebook.
+- Read the instructions carefully.
+- Work with a partner.
+- Complete the exercise.
+- Listen to the recording.
+## Negative: don't + base verb
+- Don't use your phone during the activity.
+- Don't write your name in this section.
+- Don't forget to submit your assignment.
+- Don't speak while the audio is playing.
+## Polite: please
+- Please repeat the question.
+- Please open the document.
+- Please speak more slowly.
+img m1.32 | Affirmative and negative imperatives
+## More examples
+t Affirmative | Negative
+r Always respect your classmates. | Don't leave your homework until the last minute.
+r Keep your room clean and organized. | Don't waste water while brushing your teeth.
+r Turn off the lights before leaving. | Don't interrupt your teacher during the lesson.
+r Help your little brother with his homework. | Don't forget to bring your English dictionary.
+r Take your notebook to the classroom. | Don't leave your belongings on the floor.
+r Wash your hands before preparing food. | Don't spend too much time playing video games.
+r Practise English for twenty minutes every day. | Don't cross the street without looking both ways.
+r Put your school supplies inside your backpack. | Don't play in the classroom.
+n Imperatives = orders, instructions or directions.
+`},
+
+/* ---------- PHASE 1 · UNIT 4 ---------- */
+'countable-uncountable': { title: 'Countable and uncountable nouns, some and any', ipa: '/ˈkaʊn.tə.bəl, ʌnˈkaʊn.tə.bəl/', body: `
+## Countable nouns
+p Countable nouns are things we can count one by one. They have a singular and a plural form. Use a or an with singular countable nouns, and numbers or quantifiers with plural countable nouns.
+img m1.33 | A basket of apples: apples are countable
+- A sandwich, two sandwiches.
+- An apple, three apples.
+- A bottle, four bottles.
+- One egg, six eggs.
+- A student, twenty students.
+p Use how many to ask about the quantity of countable nouns.
+- How many apples do you need?
+- How many bottles of water are there?
+- How many sandwiches would you like?
+- How many students are in the cafeteria?
+img m1.34 | Food: some things you can count and some you cannot
+## Uncountable nouns
+p Uncountable nouns are substances, materials or ideas that we do not normally count one by one.
+w water, milk, rice, bread, information, money, coffee
+p To express an amount of an uncountable noun, use a container or a measurement: a bottle of water, a cup of coffee.
+## Vocabulary: food
+w bread, rice, pasta, meat, chicken, fish, egg, cheese, milk, butter, fruit, apple, banana, orange, grapes, strawberry, vegetables, potato, tomato, onion, carrot, salad, soup, sandwich, cake, cookies, sugar, salt
+## Vocabulary: drinks
+w water, juice, coffee, milkshake, soda, lemonade
+## Vocabulary: shopping
+w shopping list, shop, store, supermarket, price, money, cash, cashier, customer, sell, pay, buy, expensive, cheap, credit card, receipt, How much?, How many?
+## Vocabulary: containers
+w bottle, glass, cup, mug, can, carton, box, bag, bowl, plate, jar, packet, slice, piece, loaf of bread, bar of chocolate
+- a bottle of water
+- a cup of tea
+- a slice of pizza
+## Countable or uncountable?
+t Countable | Uncountable
+r apple, apples | water
+r egg, eggs | milk
+r banana, bananas | rice
+r cookie, cookies | sugar
+r bottle, bottles | bread
+r — | cheese, money, coffee
+n Countable nouns: you can count them (one, two, three…). Uncountable nouns: we do not usually count them one by one.
+## Some and any
+p We usually use some in affirmative sentences and any in negative sentences and questions.
+img m1.35 | Some and any in affirmative, negative and question sentences
+p Some: affirmative
+- I have some pencils.
+- She has some apples.
+- We need some water.
+- He eats some bread.
+- There are some cats in the garden.
+p Any: negative
+- She didn't see any birds.
+- She doesn't have any brothers.
+- We don't need any help.
+- They don't have any pets.
+- There aren't any chairs in the room.
+p Any: questions, when you ask for information and do not know the answer
+- Do you have any pets?
+- Are there any books on the table?
+- Is there any milk in the fridge?
+- Do you need any help?
+p Exception: we often use some to offer or to ask for something politely.
+- Would you like some coffee?
+- Can I have some water, please?
+- Could we have some information about the course?
+audio 1-9v7kDdaPutsPvGFx4DpX8qRyfZ4Cd3h | Audio: countable nouns
+`},
+'quantifiers': { title: 'Quantifiers: much, many, a lot of, a few, a little', ipa: '/ˈkwɒn.tɪ.faɪ.ərz/', body: `
+p Quantifiers are words that show the quantity or amount of people, objects, animals, food, drinks or other things. They tell how much or how many of something we have, need, want or see, without exact numbers.
+- I have many books.
+- She drinks a lot of water.
+- There is a little milk in the refrigerator.
+- We have a few apples.
+p Not all quantifiers work with all nouns. Many, a few and few go with plural countable nouns. Much, a little and little go with uncountable nouns.
+- There are many students in the classroom.
+- I have a few friends at university.
+- Few people understand this question.
+- We do not have much time.
+- There is a little sugar in my coffee.
+- We have little information about the event.
+n Many goes with plural countable nouns. Much goes with uncountable nouns.
+## Much
+p Much goes with uncountable nouns to talk about a large amount. It is most common in questions and negative sentences.
+f How much + uncountable noun?
+f not + much + uncountable noun
+img m1.37 | Which quantifiers go with countable and uncountable nouns
+- How much water do you drink every day?
+- I do not have much money.
+- There isn't much milk in the refrigerator.
+- How much time do we have?
+- She doesn't eat much rice.
+p In everyday affirmative sentences, people prefer a lot of: I have a lot of homework sounds more natural than I have much homework. But much is common after too, so and very.
+- There is too much sugar in this coffee.
+- Thank you so much.
+- She has too much work today.
+## Many
+p Many goes with plural countable nouns to talk about a large number of people, animals or things.
+f Many + plural countable noun
+f How many + plural countable noun?
+- There are many students at the university.
+- How many books do you have?
+- I don't have many friends in this city.
+- How many classes do you have today?
+- Many people speak English around the world.
+- There are too many cars on this street.
+- She has so many ideas.
+img m1.38 | Many cars in a parking lot
+## A lot of
+p A lot of expresses a large quantity or number. It works with both countable and uncountable nouns, and it is very common in everyday affirmative sentences.
+f A lot of + plural countable noun / uncountable noun
+- I have a lot of books.
+- There are a lot of students in my class.
+- She has a lot of friends.
+- I drink a lot of water.
+- He has a lot of homework.
+- There is a lot of traffic today.
+## A few and few
+p A few goes with plural countable nouns and means a small number, but enough. It is a positive idea. Few means not many, and it can sound negative.
+f A few / few + plural countable noun
+- I have a few friends at university.
+- There are a few apples in the kitchen.
+- She has a few questions about the lesson.
+- He knows a few English words.
+p Compare: I have a few friends means I have some friends. I have few friends means I do not have many friends, and that may be a problem.
+img m1.39 | A few cars in a parking lot
+## A little and little
+p A little goes with uncountable nouns and means a small amount, but enough. Little means almost none.
+f A little / little + uncountable noun
+- There is a little milk in the refrigerator.
+- She speaks a little English.
+- We have a little time before class.
+- Add a little sugar to the coffee.
+- He needs a little help with his homework.
+p Compare: We have a little time means we have some time. We have little time means we have almost no time.
+img m1.40 | A little sugar
+## Important differences
+t Pair | Rule | Example
+r much / many | much + uncountable; many + plural countable | How much water? How many bottles?
+r much, many / a lot of | much and many in questions and negatives; a lot of in affirmatives, with both types | I have a lot of friends. Is there much milk left?
+r a few / few | a few = some; few = not enough | I have a few ideas. I have few ideas.
+r a little / little | a little = some; little = almost none | There is a little food left. There is little food left.
+img m1.41 | Summary of quantifiers in English
+n First decide if the noun is countable or uncountable. Then decide if you mean a large amount, a small but sufficient amount, or an insufficient amount.
+audio 1ay8ztHi2JJQjFgHNAaIIsvaK3pNKtRnn | Audio: quantifiers
+`},
+'present-continuous': { title: 'The present continuous', ipa: '/ˈprez.ənt kənˈtɪn.ju.əs/', body: `
+p We use the present continuous for actions that are happening now or around now, and for temporary situations. It is formed with am, is or are and the main verb with -ing.
+f Affirmative: subject + am / is / are + verb-ing
+f Negative: subject + am not / isn't / aren't + verb-ing
+f Question: Am / Is / Are + subject + verb-ing?
+audio 1HfNlIEj5A-1ZiUgiVXOyVwKRfFAcKgVz | Audio: the present continuous
+- I am studying English right now.
+- She is wearing a blue jacket.
+- They are working on a university project.
+- We aren't watching television at the moment.
+- Is your friend studying in the library?
+- Are you listening to the teacher?
+- He isn't attending class today.
+## Spelling rules for -ing
+t Rule | Example
+r most verbs: add -ing | study → studying
+r verbs ending in -e: remove -e and add -ing | make → making
+r short verbs ending consonant-vowel-consonant: double the last consonant | run → running
+r verbs ending in -ie: change -ie to -y and add -ing | lie → lying
+## Examples in context
+img m1.44 | What are you doing? I am eating now.
+- I am making dinner.
+- He is running in the park.
+- They are studying for an English exam.
+- She is lying on the sofa.
+- You are driving too fast!
+- The teacher is writing the explanation on the board.
+- Sorry, I can't talk right now; I'm driving.
+## Describing clothes and current activities
+p Combine the present continuous with clothing vocabulary to describe what someone is wearing now.
+img m1.43 | Present continuous structure: The dog is sleeping
+w T-shirt, jeans, sneakers, dress, skirt, jacket, shirt, shorts, sweater, shoes
+- I am wearing jeans and sneakers.
+- She is wearing a black dress.
+- He is wearing a white shirt and blue jeans.
+- They are wearing casual clothes today.
+## Current activities
+w eating, cooking, studying, reading, writing, sleeping, walking, running, swimming, dancing, singing, watching TV, listening to music, talking on the phone, playing video games, doing homework, cleaning the house, taking a shower, shopping
+`},
+'past-time-expressions-1': { title: 'The simple past and time expressions', ipa: '/taɪm ɪkˈspreʃ.ənz/', body: `
+p We use the simple past for actions or events that started and finished in the past: yesterday, last weekend, your last vacation. Regular verbs add -ed. Irregular verbs have their own past forms, and you need to learn them.
+f Affirmative: subject + past form of the verb
+f Negative: subject + didn't + base verb
+f Question: Did + subject + base verb?
+- I visited my grandparents last weekend.
+- She watched a movie yesterday.
+- We studied for the English exam.
+- He went to the beach on Saturday.
+- They ate pizza after class.
+p In negative sentences the verb returns to its base form, because didn't already shows the past.
+- I didn't visit my friend yesterday.
+- She didn't watch television last night.
+- We didn't go to the cinema.
+- He didn't eat breakfast this morning.
+p In questions, use did, then the subject, then the base form.
+- Did you study last night?
+- Did she travel during her vacation?
+- Did they play soccer on Sunday?
+- Where did you go last weekend?
+## Regular and irregular verbs
+img m1.45 | Regular and irregular verbs
+t Regular: base form | Past
+r play | played
+r watch | watched
+r visit | visited
+r walk | walked
+r cook | cooked
+r clean | cleaned
+r listen | listened
+r work | worked
+r study | studied
+r dance | danced
+r travel | traveled
+r talk | talked
+t Irregular: base form | Past
+r go | went
+r eat | ate
+r drink | drank
+r see | saw
+r do | did
+r have | had
+r buy | bought
+r get | got
+r make | made
+r take | took
+r come | came
+r swim | swam
+r write | wrote
+r read | read
+r sleep | slept
+r meet | met
+r speak | spoke
+r give | gave
+r find | found
+r spend | spent
+## Time expressions
+p Time expressions show when an action happens. They make the difference between what is happening now and what is already finished.
+t Present continuous | Simple past
+r now | yesterday
+r right now | last night
+r at the moment | last weekend
+r today | two days ago
+r currently | last year
+r this week | in 2025
+n The present continuous describes an action happening now or around now. The simple past describes a finished event.
+## Example paragraph
+p Today, I am sitting in the university library. I am wearing jeans, a white T-shirt and sneakers. I am studying English because I have an important project. Last weekend, I visited my cousins and watched a movie with my family. On Sunday, we went to a restaurant and ate pizza. I enjoyed my weekend because I spent time with the people I love.
+## Clothes
+w T-shirt, shirt, blouse, pants, jeans, shorts, skirt, dress, jacket, coat, sweater, hoodie, shoes, sneakers, boots, sandals, socks, hat, cap, belt, scarf, gloves, sunglasses, handbag
+`},
+
+/* ---------- PHASE 2 ---------- */
+'past-simple': { title: 'Past simple: regular and irregular verbs', ipa: '/pɑːst ˈsɪm.pəl/', body: `
+img p2.1 | Past simple: regular and irregular verbs
+p Grammar: the past simple in affirmative, negative and question forms. Vocabulary: past time expressions, life events, travel and last weekend.
+p We use the past simple for actions that started and finished in the past.
+## Affirmative
+p For regular verbs, we usually add -ed.
+t Present | Past
+r play | played
+r visit | visited
+r watch | watched
+r work | worked
+- I watched a movie yesterday.
+- She visited her grandmother last weekend.
+- We played soccer on Sunday.
+p Some verbs are irregular.
+t Present | Past
+r go | went
+r eat | ate
+r see | saw
+r buy | bought
+r have | had
+- I went to the beach.
+- She ate pizza.
+- They saw a movie.
+## Vocabulary
+d last weekend | I visited my cousins last weekend.
+d yesterday | I finished my homework yesterday.
+d two days ago | We finished the job two days ago.
+d a few years ago | I started learning English a few years ago.
+d last year | She graduated from high school last year.
+d move | My family moved to a new house.
+d meet | I met a friendly tourist during my trip.
+d travel | We traveled by bus last weekend.
+d explore | They explored the town yesterday.
+## Negative
+f Subject + didn't + base verb
+- I didn't go to school.
+- She didn't watch TV.
+- We didn't play soccer.
+ok I didn't go.
+no I didn't went.
+## Questions
+f Did + subject + base verb?
+- Did you travel last weekend?
+- Did she visit her family?
+- Did they play soccer?
+`},
+'past-time-expressions': { title: 'Past time expressions', ipa: '/pɑːst taɪm ɪkˈspreʃ.ənz/', body: `
+p These expressions tell us when something happened in the past. They usually go at the end of the sentence.
+img p2.2 | Past time expressions with examples
+w yesterday, last night, last weekend, last week, last month, two days ago, three years ago, in 2020
+- I called my grandmother last night.
+- We moved to Santa Tecla three years ago.
+- She started university in 2020.
+`},
+'past-continuous': { title: 'Past continuous vs past simple', ipa: '/pɑːst kənˈtɪn.ju.əs/', body: `
+video 1JI0aNcsovIHm7dVZRVizJsuqD0VN62Nh | Video: past continuous vs past simple
+img p2.3 | Past continuous vs past simple
+p Grammar: the past continuous and the past simple with when and while. Vocabulary: interruptions, accidents and telling simple stories.
+## Vocabulary
+d when | I was working when my mom called.
+d while | While I was walking, I watched a soccer match.
+d accident | We saw an accident while we were driving.
+d lose | He lost his phone while he was shopping.
+d happen | Something strange happened last night.
+d unfortunately | Unfortunately, it started raining during our trip.
+## Past continuous
+p We use the past continuous for an action that was in progress at a specific moment in the past.
+f Subject + was / were + verb-ing
+- I was studying at 8 p.m.
+- She was watching TV.
+- They were playing outside.
+## Past simple vs past continuous
+img p2.4 | An action in progress interrupted by a short action
+p We can use both tenses together. In I was watching TV when my friend called me, the TV action was already happening. Then my friend called me, and that action interrupted the first one.
+f when + the short action (past simple)
+- I was sleeping when my phone rang.
+f while + the action in progress (past continuous)
+- While I was walking, I saw my friend.
+## Easy example
+- I was walking home when it started to rain.
+n Was walking is the past continuous. Started is the past simple.
+`},
+'comparatives': { title: 'Comparative and superlative adjectives', ipa: '/kəmˈpær.ə.tɪv, suːˈpɜː.lə.tɪv/', body: `
+video 1lEDg9o-tKFwBMZDdHPZFJJrOXuJasrlB | Video: comparatives and superlatives
+img p2.5 | Comparative and superlative adjectives
+p Use comparatives to compare two things and superlatives to compare three or more. Forms: -er, -est, more, most and irregular forms. Use them to compare places, cities, products, the weather and personalities.
+## Comparatives
+f short adjective + -er + than
+f more + long adjective + than
+img p2.6 | Two houses of different sizes
+- The first house is bigger than the second house.
+img p2.7 | A fast red car and a slow blue car
+- The red car is faster than the blue car.
+## Superlatives
+f the + short adjective + -est
+- tall, the tallest
+- fast, the fastest
+- small, the smallest
+- Mount Everest is the highest mountain in the world.
+f the most + long adjective
+- beautiful, the most beautiful
+- expensive, the most expensive
+- This is the most expensive phone in the store.
+## Irregular adjectives
+t Adjective | Comparative | Superlative
+r good | better | the best
+r bad | worse | the worst
+r far | farther / further | the farthest / the furthest
+`},
+'modal-verbs': { title: 'Modal verbs and advice', ipa: '/ˈməʊ.dəl vɜːbz/', body: `
+video 1bUXvyQ3SXaqrY69Dvu9mvoPAdmrEn3P- | Video: modal verbs and advice
+img p2.8 | Modal verbs: must, should, have to
+p Grammar: must, mustn't, should, shouldn't, have to and don't have to.
+## Vocabulary
+d stay hydrated | You should stay hydrated during the day.
+d wear a uniform | The students have to wear a uniform.
+d follow the rules | Students must follow the school rules.
+d healthy habits | Healthy habits help us feel better.
+d take a break | You should take a break after working.
+d be careful | You must be careful when you are sick.
+d be on time | You must be on time for class.
+## Must: very important or necessary
+- You must wear a seat belt.
+- Students must do their homework.
+- You must be careful.
+## Mustn't: not allowed
+- You mustn't smoke here.
+- You mustn't use your phone during the exam.
+- You mustn't run in the classroom.
+## Should: advice
+- You should drink more water.
+- You should study every day.
+- You should go to bed early.
+## Shouldn't: advice not to do something
+- You shouldn't eat too much junk food.
+- You shouldn't stay up all night.
+- You shouldn't be late.
+## Have to: necessary because of a rule or situation
+- I have to go to school.
+- She has to wear a uniform.
+- We have to finish our homework.
+## Don't have to: not necessary
+- You don't have to come tomorrow.
+- We don't have to wear a uniform today.
+n You don't have to go means it is not necessary. You mustn't go means you are not allowed to go.
+img p2.9 | Summary of modal verbs
+`},
+
+/* ---------- PHASE 3 ---------- */
+'going-to': { title: 'The future with be going to', ipa: '/ˈɡəʊ.ɪŋ tuː/', body: `
+p In this lesson you will talk about future activities and plans using be going to.
+p We use be going to for plans we already decided and for predictions based on what we can see now.
+f Subject + am / is / are + going to + verb + complement
+## Vocabulary
+p Watch the video, then review each word and the example sentences.
+video 16GOL9s64-RDOyNEpgw9eITDomEQXwH4c | Video: time expressions for the future
+c p3.2 | tomorrow
+c p3.3 | next week
+c p3.4 | next month
+c p3.5 | next year
+c p3.6 | tonight
+## Affirmative
+- I am going to learn English next year.
+- You are going to work next weekend.
+- She is going to buy a car next year.
+- He is going to play soccer on Friday.
+- It is going to rain tonight.
+- We are going to buy a house next month.
+- They are going to take a test tomorrow.
+## Negative
+f Subject + am / is / are + not + going to + verb + complement
+- I am not going to learn English next year.
+- She is not going to buy a car next year.
+- It is not going to rain tonight.
+- They are not going to take a test tomorrow.
+## Questions
+f Am / Is / Are + subject + going to + verb + complement?
+- Am I going to learn English next year?
+- Are you going to work next weekend?
+- Is she going to buy a car next year?
+- Is he going to play soccer on Friday?
+- Is it going to rain tonight?
+- Are we going to buy a house next month?
+- Are they going to take a test tomorrow?
+`},
+'present-continuous-future': { title: 'The present continuous for future plans', ipa: '/ˈprez.ənt kənˈtɪn.ju.əs/', body: `
+p We use the present continuous for future plans that are already organized or agreed, with a date, a time or a place. It is also used for temporary situations.
+d temporary situations | situations that last only for a short time
+d fixed future plans | events that are already organized or scheduled
+f Subject + am / is / are + verb-ing + complement + time expression
+video 1tBiJt5ypZyfzj4pWrdya6Ld0Lz5fSSUn | Video: the present continuous for the future
+## Vocabulary
+p Learn these words and practise their pronunciation.
+c p3.8 | these days
+c p3.9 | currently
+c p3.10 | next week
+c p3.11 | tonight
+c p3.12 | tomorrow
+## Examples
+- I am staying at my friend's house these days.
+- You are currently working from home.
+- She is presenting the task tonight.
+- He is meeting a friend tomorrow.
+- It is raining a lot these days.
+- They are starting a job this month.
+- We are not traveling next week.
+n Be going to shows an intention. The present continuous shows an arrangement that is already certain.
+`},
+'will': { title: 'The future with will', ipa: '/wɪl/', body: `
+p In this lesson you will talk about the future using will. We use it for predictions, quick decisions, offers and promises.
+f Subject + will + verb + complement
+## Vocabulary
+p Practise the pronunciation of each expression, then use it in writing and speaking. You can also practise with the AI assistant.
+c p3.15 | tomorrow
+c p3.16 | these days
+c p3.17 | next week
+c p3.18 | next month
+c p3.19 | next year
+c p3.20 | in three weeks
+c p3.21 | soon
+c p3.22 | later
+## When do we use will?
+d predictions | I think it will rain later.
+d promises | I will meet you tomorrow.
+d spontaneous decisions | The phone is ringing. I will get it.
+d offers and help | I will cook dinner for you.
+d refusals | My computer won't turn on.
+n Won't is the short form of will not. Use it in negative sentences.
+## Affirmative
+- I will study English next year.
+- You will travel on vacation.
+- She will travel tomorrow.
+- He will work on Monday.
+- It will rain later.
+- We will go to the beach next week.
+- They will play soccer on Sunday.
+## Negative
+f Subject + will not + verb + complement
+- I will not study English next year.
+- You will not travel on vacation.
+- She will not travel tomorrow.
+- He will not work on Monday.
+- It will not rain later.
+- We will not go to the beach next week.
+- They will not play soccer on Sunday.
+## Questions
+f Will + subject + verb + complement?
+- Will I study English next year?
+- Will you travel on vacation?
+- Will she travel tomorrow?
+- Will he work on Monday?
+- Will it rain later?
+- Will we go to the beach next week?
+- Will they play soccer on Sunday?
+`},
+'present-perfect': { title: 'The present perfect', ipa: '/ˈprez.ənt ˈpɜː.fɪkt/', body: `
+p We use the present perfect for past actions connected to the present, for life experiences, for actions that started in the past and continue now, and for recent actions when the exact time is not important.
+f Subject + have / has + past participle + complement
+## Affirmative
+- I have visited Paris twice.
+- You have finished the project.
+- She has lived here for three years.
+- He has lost his keys.
+- It has stopped raining.
+- We have seen that movie.
+- They have finished their homework.
+## Negative
+f Subject + have / has + not + past participle + complement
+- I have not visited Paris.
+- She has not lived here for three years.
+- He has not lost his keys.
+- We have not seen that movie.
+- They have not finished their homework.
+## Questions
+f Have / Has + subject + past participle + complement?
+- Have you visited Paris?
+- Has she lived here for three years?
+- Has he lost his keys?
+- Have we seen that movie?
+- Have they finished their homework?
+`},
+
+/* ---------- PHASE 4 ---------- */
+'first-conditional': { title: 'The first conditional', ipa: '/fɜːst kənˈdɪʃ.ən.əl/', body: `
+p Use conditionals for real possibilities, plans, cause and effect, and warnings. A conditional sentence states a condition and the result that happens if the condition is true. It has two parts: the if clause, with the condition, and the main clause, with the result.
+p The first conditional talks about a possible future situation and its likely result.
+f If + present simple (condition), will + verb (result)
+- If I study, I will pass my exams.
+p The order can change: first the result, then the condition. In that case we do not need a comma.
+- I will pass the exam if I study.
+## Examples
+c u.c_study | If I study, I will pass my exams.
+c u.c_rain | I will stay indoors if it rains.
+c p4.5 | If I eat healthy food, I will feel better.
+c u.c_phone | I will answer the call if he calls me.
+c u.c_time | They will arrive on time if they leave now.
+## Vocabulary
+d study | to use your mind to learn
+d exam | a test of your knowledge or progress
+d indoors | in or into a house or building
+d rain | water that falls from the clouds
+d answer | to reply
+d call | to phone someone
+d on time | at the right time
+d leave | to go away from a place
+video 1zRbH8BAKFQ5IxBXKsj3bgyLJK44TMoU4 | Video: the first conditional
+`},
+'verb-patterns': { title: 'Verb patterns: infinitives and gerunds', ipa: '/ˈdʒer.ənd/', body: `
+p Use verb patterns to talk about personal preferences, ambitions, career goals and hobbies. In this lesson you will learn the difference between verb + infinitive and verb + -ing, when to use each one and the exceptions.
+video 19kj41bl8b3V48tDK-T6AK5r-_z99HPuN | Video: verb patterns
+## What are infinitive and -ing patterns?
+d infinitive pattern | to + base verb: to eat, to swim, to read. Some verbs are followed by this form.
+d -ing pattern | the verb ends in -ing: eating, swimming, reading. Some verbs need this form after them.
+c u.v_france | I hope to visit France next summer.
+c u.v_swim | I enjoy swimming in the ocean.
+- He decided to leave the party early.
+- I always enjoy cooking.
+video 1rjxlTVQ4TBK2AqUoRizH5KiocT3iQGa2 | Video: -ing or infinitive?
+c u.v_cook | I love cooking Indian food.
+p The -ing form puts the emphasis on the activity itself and how much you enjoy it.
+c u.v_juice | I like to drink juice in the morning and tea at lunchtime.
+p The to-infinitive puts the emphasis on the preference or habit.
+## Vocabulary
+p Verbs followed by the infinitive
+w decide, hope, need, plan, want
+p Verbs followed by -ing (actions that are ongoing, habitual or emotional)
+w enjoy, avoid, finish, mind, keep
+p Verbs followed by either form (the meaning can change a little)
+w like, love, prefer, hate
+## Which one?
+c u.v_nurse | I prefer to be a nurse and work in a hospital.
+c u.v_dance | I love dancing during aerobics sessions.
+- I like studying English at UTEC.
+- Do you prefer walking or watching TV?
+- I prefer to play the guitar in my free time.
+`},
+'relative-clauses': { title: 'Relative clauses', ipa: '/ˈrel.ə.tɪv ˈklɔː.zɪz/', body: `
+p Relative clauses define people, objects and places. They will improve your writing and your communication.
+p A relative clause is a type of subordinate clause. It modifies a noun and gives essential information that identifies the person or thing we are talking about.
+video 1tZDi9qr1_i5OZucsuWPimBefmiNWkBRJ | Video: relative clauses
+## Function
+p Relative clauses add information about the noun or pronoun they modify.
+- The book that she is reading is interesting.
+- I met the person who won the competition.
+c u.r_dog | I have a dog that loves chasing balls.
+n In the last example, the noun is dog and the relative clause is that loves chasing balls.
+## Placement
+p A relative clause goes directly after the noun it modifies, in the middle or at the end of the sentence.
+c u.r_soccer | The boy who is playing soccer is my neighbor.
+- I bought a new car, which is blue.
+## Vocabulary
+d that | for things and types of people
+d where | for places and locations
+d who | for people
+d which | for things and ideas
+c p4.18 | The sweater that I wanted to buy is out of stock.
+c p4.19 | This is the station where I take the train.
+c p4.20 | The chocolates which you bought are delicious.
+c p4.21 | This is the store which sells suits.
+- This is the style that I want to use.
+- The woman who called the police lives next door.
+n Who, which and where are also question words: Who called the police? Which size would you like? Where is the station?
+`},
+'passive-voice': { title: 'The passive voice', ipa: '/ˈpæs.ɪv vɔɪs/', body: `
+p The passive voice helps you express ideas when the action is more important than the person who does it. The object of the active sentence becomes the subject.
+## Present simple passive
+p Formed with am / is / are + past participle. It moves the focus from who does the action to what happens.
+f Object + am / is / are + past participle
+f Am / Is / Are + object + past participle?
+- Active: The gardener waters the flowers every evening.
+- Passive: The flowers are watered by the gardener every evening.
+- Active: Helen doesn't drink anything at parties.
+- Passive: Nothing is drunk by Helen at parties.
+c u.p_garden | The flowers are watered by the gardener every evening.
+## Past simple passive
+p Formed with was / were + past participle. It describes finished actions and focuses on what happened, not on who did it. It is very useful for history, reports and formal descriptions.
+f Object + was / were + past participle
+f Was / Were + object + past participle?
+- Active: The teacher corrected the mistakes.
+- Passive: The mistakes were corrected by the teacher.
+- Active: Did the little boy sell all the candy bars?
+- Passive: Were all the candy bars sold by the little boy?
+c u.p_teacher | The mistakes were corrected by the teacher.
+`}
+};
+
+const ABOUT = {
+  title: 'Virtual Assistance Tool to Support the Basic English Language Skills of English Major Students at Universidad Tecnológica de El Salvador',
+  purpose: 'This project creates support for teachers and students of the Basic English level and strengthens students’ learning.',
+  summary: 'Artificial intelligence keeps advancing, and we did not want to fall behind. We created an English support tool for basic-level students, as part of our commitment to the Universidad Tecnológica de El Salvador and to the many students who find English difficult. We built a virtual assistant with AI support to develop different English skills.',
+  stand: 'The assistant is programmed to answer specific questions about English, including pronunciation, and to support learners as they build their language skills.',
+  goal: 'A public good.',
+  leader: { name: 'Joel Contreras', text: 'Joel leads the team. He cares about the team, keeps track of the work, gives constructive feedback and acts for the benefit of the team and the project.' },
+  photoCredits: ["afrarpics", "alexanderbagno", "alipzn", "anthonydelanoix", "bondibarrister", "cg", "daveballew", "dmjdenise", "dncerullo", "erothermel", "frostroomhead", "ionelaaaaa", "jeshoots", "jeswinthomas", "kobbymendez", "lauracathleen", "m15ky", "mateusz_feliksik", "mimithian", "nate_dumlao", "nci", "nguyendhn", "paulinel", "rani_george532", "ritamalcok", "silverkblack", "taypaigey"],
+  team: 'The team is a small group of members of different ages, brought together by one purpose: an educational project that helps the education system.'
+};
+
+(function(){
+'use strict';
+document.documentElement.classList.remove('no-js');
+
+/* ---------- icons ---------- */
+const I = {
+  spk:'<svg class="spk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5Z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg>',
+  bars:'<svg class="bars" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="4" y="5" width="3.4" height="14" rx="1.7"/><rect x="10.3" y="5" width="3.4" height="14" rx="1.7"/><rect x="16.6" y="5" width="3.4" height="14" rx="1.7"/></svg>',
+  arrow:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>',
+  back:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="m11 6-6 6 6 6"/></svg>',
+  check:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>',
+  x:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>',
+  chev:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>',
+  info:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M12 11v6"/><circle cx="12" cy="7.6" r="0.6" fill="currentColor"/></svg>',
+  ext:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6"/><path d="M20 4 11 13"/><path d="M19 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5"/></svg>',
+  chat:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20.5l1.4-4.9A8 8 0 1 1 21 12Z"/><path d="M8.5 11h.01M12 11h.01M15.5 11h.01"/></svg>',
+  close:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>',
+  slow:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2"/><path d="M9.5 2.5h5"/></svg>'
+};
+const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const $ = (s, r=document) => r.querySelector(s);
+const $$ = (s, r=document) => [...r.querySelectorAll(s)];
+
+/* ---------- index ---------- */
+const ORDER = []; const WHERE = {};
+COURSE.forEach(ph => ph.units.forEach((u, ui) => u.lessons.forEach(id => {
+  if (!LESSONS[id]) { console.warn('Missing lesson', id); return; }
+  WHERE[id] = { phase: ph, unit: u, ui }; ORDER.push(id);
+})));
+const phaseLessons = ph => ph.units.flatMap(u => u.lessons);
+const lessonUrl = id => '#' + id;
+
+/* ---------- progress (per browser) ---------- */
+const KEY = 'basic-english:done';
+let done = new Set();
+try { done = new Set(JSON.parse(localStorage.getItem(KEY) || '[]')); } catch(e) {}
+function saveDone(){ try { localStorage.setItem(KEY, JSON.stringify([...done])); } catch(e) {} }
+const countDone = ph => phaseLessons(ph).filter(id => done.has(id)).length;
+function meter(ph){
+  const n = phaseLessons(ph).length, d = countDone(ph);
+  return `<span class="meter"><span class="track" aria-hidden="true"><span class="fill" style="transform:scaleX(${n ? d/n : 0})"></span></span><span>${d} of ${n} learned</span></span>`;
+}
+
+/* ---------- speech ---------- */
+const synth = window.speechSynthesis;
+const canSpeak = !!(synth && window.SpeechSynthesisUtterance);
+if (!canSpeak) document.documentElement.classList.add('no-speech');
+let voice = null, current = null;
+function pickVoice(){
+  if (!canSpeak) return;
+  const vs = synth.getVoices();
+  voice = vs.find(v => /en[-_]US/i.test(v.lang) && /Google|Samantha|Jenny|Aria|Natural/i.test(v.name))
+       || vs.find(v => /en[-_]US/i.test(v.lang)) || vs.find(v => /^en/i.test(v.lang)) || null;
+}
+if (canSpeak){ pickVoice(); synth.onvoiceschanged = pickVoice; }
+function speak(text, btn, rate){
+  if (!canSpeak) return;
+  synth.cancel();
+  if (current){ current.setAttribute('aria-pressed','false'); if (current === btn){ current = null; return; } }
+  const u = new SpeechSynthesisUtterance(text.replace(/\s*\/.*?\//g,' ').replace(/[→]/g,', '));
+  u.lang = 'en-US'; if (voice) u.voice = voice; u.rate = rate || 0.92;
+  current = btn || null;
+  if (btn) btn.setAttribute('aria-pressed','true');
+  const end = () => { if (btn) btn.setAttribute('aria-pressed','false'); if (current === btn) current = null; };
+  u.onend = end; u.onerror = end;
+  synth.speak(u);
+}
+const askBtn = (text) => `<button type="button" class="ask" data-ask="${esc('Explain this sentence and give me two similar examples: ' + text)}" aria-label="Ask the assistant about: ${esc(text)}">${I.chat}<span>Ask</span></button>`;
+const sayBtn = (text, label) => `<button type="button" class="say" data-say="${esc(text)}" aria-pressed="false" aria-label="${esc(label || 'Listen: ' + text)}">${I.spk}${I.bars}</button>`;
+
+/* ---------- lesson body parser ---------- */
+function renderBody(src){
+  let hN = 0, firstP = true;
+  const lines = src.split('\n').map(l => l.trim()).filter(Boolean);
+  let out = '', i = 0;
+  const take = (prefix) => { const items = []; while (i < lines.length && lines[i].startsWith(prefix)) { items.push(lines[i].slice(prefix.length).trim()); i++; } return items; };
+  while (i < lines.length){
+    const l = lines[i];
+    if (l.startsWith('## ')){ out += `<h2 id="sec-${hN++}" tabindex="-1">${esc(l.slice(3))}</h2>`; i++; }
+    else if (l === 'letters'){ i++;
+      const names = {A:'ay',B:'bee',C:'see',D:'dee',E:'ee',F:'ef',G:'jee',H:'aitch',I:'eye',J:'jay',K:'kay',L:'el',M:'em',N:'en',O:'oh',P:'pee',Q:'cue',R:'ar',S:'es',T:'tee',U:'you',V:'vee',W:'double-u',X:'ex',Y:'why',Z:'zee'};
+      out += '<ul class="letters" aria-label="The alphabet">' + Object.keys(names).map(L => `<li><button type="button" data-say="${L}" aria-pressed="false" aria-label="Listen: letter ${L}">${L}<span>${L.toLowerCase()}</span></button></li>`).join('') + '</ul>';
+    }
+    else if (l.startsWith('- ')){ out += '<ul class="ex-list">' + take('- ').map(t => `<li>${sayBtn(t)}<span>${esc(t)}</span>${askBtn(t.replace(/^(Active|Passive): /,''))}</li>`).join('') + '</ul>'; }
+    else if (l.startsWith('c ')){ const items = take('c ').map(t => t.split('|').map(s=>s.trim()));
+      const short = items.every(([,t]) => t.split(' ').length <= 3);
+      out += `<ul class="cards${short ? ' vocab' : ''}">` + items.map(([ref, t]) => `<li><button type="button" class="zoom" data-full="${esc(imgUrl(ref))}" data-alt="${esc(t)}" aria-label="Enlarge picture: ${esc(t)}"><img src="${esc(imgUrl(ref))}" alt="${esc(t)}" loading="lazy" decoding="async"></button><p>${sayBtn(t)}<span>${esc(t)}</span>${short ? '' : askBtn(t)}</p></li>`).join('') + '</ul>'; }
+    else if (l.startsWith('q ')){ out += '<ul class="qa">' + take('q ').map(t => { const [q,a] = t.split('|').map(s=>s.trim()); return `<li>${sayBtn(q + ' ' + a, 'Listen: ' + q)}<span><strong>${esc(q)}</strong> <span class="a">${esc(a)}</span></span></li>`; }).join('') + '</ul>'; }
+    else if (l.startsWith('d ')){ out += '<dl class="defs">' + take('d ').map(t => { const [d, x] = t.split('|').map(s=>s.trim()); return `<div class="row">${sayBtn(d + '. ' + x, 'Listen: ' + d)}<dt>${esc(d)}</dt><dd>${esc(x)}</dd></div>`; }).join('') + '</dl>'; }
+    else if (l.startsWith('w ')){ i++; out += '<ul class="words">' + l.slice(2).split(',').map(w => w.trim()).filter(Boolean).map(w => `<li><button type="button" data-say="${esc(w)}" aria-pressed="false" aria-label="Listen: ${esc(w)}">${I.spk.replace('class="spk"','')}${esc(w)}</button></li>`).join('') + '</ul>'; }
+    else if (l.startsWith('f ')){ out += take('f ').map(t => `<p class="formula">${esc(t)}</p>`).join(''); }
+    else if (l.startsWith('n ')){ i++; out += `<aside class="note" aria-label="Remember">${I.info}<p>${esc(l.slice(2))}</p></aside>`; }
+    else if (l.startsWith('ok ') || l.startsWith('no ')){ const ok = l.startsWith('ok '); i++; out += `<p class="pair ${ok?'ok':'no'}">${ok?I.check:I.x}<span>${esc(l.slice(3))}</span><span class="sr-only">${ok?'(correct)':'(incorrect)'}</span></p>`; }
+    else if (l.startsWith('t ')){
+      const head = l.slice(2).split('|').map(s=>s.trim()); i++;
+      const rows = take('r ').map(r => r.split('|').map(s=>s.trim()));
+      const speakCol = /^(Preposition|Adjective|Rule|Pair)$/i.test(head[0]) || /base form|present|regular|irregular|english|countable/i.test(head[0]);
+      out += `<div class="table-wrap" tabindex="0"><table><thead><tr>${head.map(h=>`<th scope="col">${esc(h)}</th>`).join('')}</tr></thead><tbody>` +
+        rows.map(r => '<tr>' + r.map((c, ci) => `<td>${ci===0 && speakCol && c !== '—' ? `<span class="cell">${sayBtn(c)}<span>${esc(c)}</span></span>` : esc(c)}</td>`).join('') + '</tr>').join('') + '</tbody></table></div>';
+    }
+    else if (l.startsWith('img ')){ i++; const [ref, alt] = l.slice(4).split('|').map(s=>s.trim());
+      out += `<figure><button type="button" class="zoom" data-full="${esc(imgUrl(ref))}" data-alt="${esc(alt)}" aria-label="Enlarge image: ${esc(alt)}"><img src="${esc(imgUrl(ref))}" alt="${esc(alt)}" loading="lazy" decoding="async"></button></figure>`; }
+    else if (l.startsWith('video ') || l.startsWith('audio ')){ i++; const kind = l.slice(0,5); const [id, title] = l.slice(6).split('|').map(s=>s.trim());
+      out += mediaCard(kind, id, title); }
+    else if (l.startsWith('p ')){ i++; const t = l.slice(2); const isLabel = t.length < 70 && !/[.!?]$/.test(t); const lead = !isLabel && firstP; if (lead) firstP = false; out += `<p${isLabel?' class="label"':lead?' class="lead-p"':''}>${esc(t)}</p>`; }
+    else { i++; out += `<p>${esc(l)}</p>`; }
+  }
+  return out;
+}
+
+/* ---------- shared pieces ---------- */
+const PLAY = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l11-6.5a1 1 0 0 0 0-1.72l-11-6.5A1 1 0 0 0 8 5.5Z"/></svg>';
+function mediaCard(kind, id, title){
+  const view = `https://drive.google.com/file/d/${esc(id)}/view`;
+  const label = kind === 'audio' ? 'Listen to the audio' : 'Play the video';
+  const inner = SANDBOX
+    ? `<a class="play" href="${view}" target="_blank" rel="noopener"><span class="disc">${PLAY}</span><span>${label} in Google Drive</span></a>`
+    : `<button class="play" type="button" data-embed="${esc(id)}" data-title="${esc(title)}"><span class="disc">${PLAY}</span><span>${label}</span></button>`;
+  return `<div class="media ${kind}"><div class="frame">${inner}</div><p class="cap"><span>${esc(title)}</span><a href="${view}" target="_blank" rel="noopener">Open in Google Drive</a></p></div>`;
+}
+function crumbs(items){
+  return `<nav aria-label="Breadcrumb"><ol class="crumbs">${items.map(([t,h], k) => `<li>${h ? `<a href="${h}">${esc(t)}</a>` : `<span${k === items.length - 1 ? ' aria-current="page"' : ''}>${esc(t)}</span>`}</li>`).join('')}</ol></nav>`;
+}
+function phaseTitle(ph){ return `Module ${ph.n}: ${ph.title}`; }
+
+/* ---------- views ---------- */
+const REEL = ['u.cover1','u.hh_smile','u.v_france','u.family','u.c_time','u.v_dance'];
+const GLYPHS = ['ə','θ','ʃ','ŋ','ð','æ'];
+const SANDBOX = /claudeusercontent|claude\.ai|anthropic/i.test(location.hostname) || (window.self !== window.top && !/github\.io|netlify|pages\.dev|vercel|localhost/i.test(location.hostname));
+function viewHome(){
+  const nextId = ORDER.find(id => !done.has(id)) || ORDER[0];
+  const started = done.size > 0;
+  return `
+  <section class="stage wrap" aria-labelledby="hero-title">
+    <div class="stage-copy">
+      <h1 id="hero-title">Your English assistant.</h1>
+      <p class="stage-lead">Ask anything about English. It explains, corrects your sentences, talks with you and knows the ${ORDER.length} lessons of this course.</p>
+      <ul class="how">
+        <li><span class="ic">${IC.talk}</span><span><strong>Pick an idea</strong> or write your own question.</span></li>
+        <li><span class="ic">${IC.vol}</span><span><strong>Tap a bold word</strong> in any answer to hear it.</span></li>
+        <li><span class="ic">${IC.mic}</span><span><strong>Press the microphone</strong> and speak in English.</span></li>
+      </ul>
+      <a class="link-arrow" href="${started ? lessonUrl(nextId) : '#course'}">${started ? 'Continue your lessons' : 'Or follow the lessons step by step'} ${I.arrow}</a>
+    </div>
+    <div class="stage-chat" id="chat-home"></div>
+  </section>
+
+  <section class="section wrap path" aria-labelledby="path-title">
+    <h2 id="path-title" class="path-title">Learn step by step.</h2>
+    <p class="path-lead">${ORDER.length} lessons in four modules, with pictures and audio. The assistant goes with you on every page.</p>
+    <ol class="stair">
+      ${COURSE.map((ph,k) => `<li class="reveal" style="--i:${k}"><a href="#${ph.id}"><span class="txt"><span class="big">${esc(ph.line)}</span><span class="small">${esc(ph.lead)} ${phaseLessons(ph).length} lessons.</span></span><img src="${imgUrl(ph.cover)}" alt="" loading="lazy" decoding="async"></a></li>`).join('')}
+    </ol>
+  </section>
+
+  <section class="section wrap grid faq" aria-labelledby="faq-title">
+    <h2 id="faq-title">Before you start.</h2>
+    <div class="qs">
+      ${[
+        ['Do I need an account?','No. The assistant and the lessons are open to everyone. Your conversation and your progress are saved in this browser, on this device.'],
+        ['What can I ask?','Anything about English: the meaning of a word, how to pronounce it, a grammar rule, or a sentence you want to check. You can also just talk with it.'],
+        ['How do I practise speaking?','Press the microphone, allow it when your browser asks, and speak in English. It works best in Chrome or Edge.'],
+        ['Can teachers use it in class?','Yes. Every lesson has its own link, so a teacher can share exactly the topic of the day.']
+      ].map(([q,a]) => `<details><summary>${esc(q)} ${I.chev}</summary><p>${esc(a)}</p></details>`).join('')}
+    </div>
+  </section>`;
+}
+
+function viewCourse(){
+  return `
+  <header class="page-head wrap">
+    ${crumbs([['Home','#'],['Course']])}
+    <h1>The course, in four modules.</h1>
+    <p class="lead">Start with Module 1 and move forward when you feel ready. Each module ends with a self-check.</p>
+    ${(() => { const nx = ORDER.find(id => !done.has(id)); if (!nx) return ''; const w = WHERE[nx]; return `<a class="next-up" href="${lessonUrl(nx)}"><span class="nu-label">${done.size ? 'Next up' : 'Start here'}</span><span class="nu-title">${esc(LESSONS[nx].title)}</span><span class="nu-meta">Module ${w.phase.n} · lesson ${phaseLessons(w.phase).indexOf(nx)+1} of ${phaseLessons(w.phase).length}</span><span class="nu-go">${I.arrow}</span></a>`; })()}
+  </header>
+  <ol class="phase-rows wrap">
+    ${COURSE.map(ph => `
+    <li class="phase-row">
+      <figure><a href="#${ph.id}" tabindex="-1" aria-hidden="true"><img src="${imgUrl(ph.cover)}" alt="" loading="lazy" decoding="async"></a></figure>
+      <div class="txt">
+        <h2><a href="#${ph.id}">${esc(phaseTitle(ph))}</a></h2>
+        <p>${esc(ph.lead)}</p>
+        <div class="row-meta">${meter(ph)}<a class="link-arrow" href="#${ph.id}">${countDone(ph) ? 'Continue' : 'Open module'} ${I.arrow}</a></div>
+      </div>
+    </li>`).join('')}
+  </ol>`;
+}
+
+function viewPhase(ph){
+  const ids = phaseLessons(ph);
+  const next = ids.find(id => !done.has(id)) || ids[0];
+  const idx = COURSE.indexOf(ph);
+  return `
+  <header class="page-head wrap">
+    ${crumbs([['Home','#'],['Course','#course'],['Module ' + ph.n]])}
+    <div class="phase-head">
+      <div class="copy">
+        <h1>${esc(phaseTitle(ph))}</h1>
+        <p class="lead">${esc(ph.lead)}</p>
+        <div class="actions"><a class="btn" href="${lessonUrl(next)}">${countDone(ph) ? 'Continue' : 'Start the first lesson'} ${I.arrow}</a>${meter(ph)}</div>
+      </div>
+      <figure><img src="${imgUrl(ph.cover)}" alt="Cover of ${esc(phaseTitle(ph))}" decoding="async"></figure>
+    </div>
+  </header>
+  ${ph.intro ? `<div class="wrap" style="max-width:1100px;margin-inline:0">${mediaCard('video', ph.intro.video, ph.intro.title)}</div>` : ''}
+  <div class="wrap">
+    ${ph.units.map((u, ui) => `
+    <section class="unit" aria-labelledby="u${ui}">
+      <h2 id="u${ui}">${u.title ? esc(u.title) : 'Lessons'}${ph.units.length > 1 ? `<span class="of">Unit ${ui+1} of ${ph.units.length} · ${u.lessons.length} lessons</span>` : `<span class="of">${u.lessons.length} lessons</span>`}</h2>
+      <ol class="lesson-list">
+        ${u.lessons.map(id => { const L = LESSONS[id]; const d = done.has(id); return `<li class="${d?'done':''}"><a href="${lessonUrl(id)}"><span class="t">${esc(L.title)}</span><span class="ipa">${esc(L.ipa||'')}</span><span class="state" aria-label="${d?'Learned':'Not learned yet'}">${d?I.check:''}</span></a></li>`; }).join('')}
+      </ol>
+    </section>`).join('')}
+  </div>
+  ${quizBlock(ph)}
+  <nav class="wrap pager" aria-label="Modules">
+    ${idx > 0 ? `<a href="#${COURSE[idx-1].id}"><span class="dir">Previous module</span><span class="ttl">${esc(phaseTitle(COURSE[idx-1]))}</span></a>` : '<span></span>'}
+    ${idx < COURSE.length-1 ? `<a class="next" href="#${COURSE[idx+1].id}"><span class="dir">Next module</span><span class="ttl">${esc(phaseTitle(COURSE[idx+1]))}</span></a>` : ''}
+  </nav>`;
+}
+
+function quizBlock(ph){
+  return `
+  <section class="check" aria-labelledby="check-title">
+    <div class="wrap check-grid">
+      <div class="check-intro">
+        <h2 id="check-title">Check yourself.</h2>
+        <p>Six quick questions about Module ${ph.n}. Choose an answer to see if it is right.</p>
+        <p class="score" aria-live="polite" data-score>0 / ${ph.check.length}</p>
+        ${ph.quiz ? `<a class="link-arrow" href="${esc(ph.quiz)}" target="_blank" rel="noopener">Take the full Gemini quiz ${I.ext}</a>` : `<a class="link-arrow" href="#assistant">Practise more with the assistant ${I.arrow}</a>`}
+      </div>
+      <ol class="qlist" data-quiz="${ph.id}">
+        ${ph.check.map((q, qi) => `
+        <li class="qitem"><fieldset>
+          <legend>${esc(q.q)}</legend>
+          <div class="opts">${q.o.map((o, oi) => `<label class="opt"><input type="radio" name="${ph.id}-q${qi}" value="${oi}" data-correct="${oi===q.a}"><span>${esc(o)}</span></label>`).join('')}</div>
+          <p class="feedback" aria-live="polite"></p>
+        </fieldset></li>`).join('')}
+      </ol>
+    </div>
+  </section>`;
+}
+
+function viewLesson(id){
+  const L = LESSONS[id], w = WHERE[id], ph = w.phase;
+  const ids = phaseLessons(ph);
+  const gi = ORDER.indexOf(id);
+  const prev = ORDER[gi-1], next = ORDER[gi+1];
+  const unitName = ph.units.length > 1 ? w.unit.title : '';
+  const side = `
+    <aside class="side" data-open="false" aria-label="Lessons in Module ${ph.n}">
+      <button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-body">Module ${ph.n} · lesson ${ids.indexOf(id)+1} of ${ids.length} ${I.chev}</button>
+      <div class="side-body" id="side-body">
+        <h2><a href="#${ph.id}">${esc(phaseTitle(ph))}</a></h2>
+        ${ph.units.map(u => `${ph.units.length>1?`<p class="unit-name">${esc(u.title)}</p>`:''}<ol>${u.lessons.map(lid => `<li class="${done.has(lid)?'done':''}"><a href="${lessonUrl(lid)}" ${lid===id?'aria-current="page"':''}><span class="dot" aria-hidden="true"></span><span>${esc(LESSONS[lid].title)}</span></a></li>`).join('')}</ol>`).join('')}
+      </div>
+    </aside>`;
+  return `
+  <div class="wrap lesson-layout">
+    ${side}
+    <article class="article">
+      <p class="lesson-meta"><a href="#${ph.id}">Module ${ph.n}</a><span>Lesson ${ids.indexOf(id)+1} of ${ids.length}${unitName ? ' · ' + esc(unitName) : ''}</span></p>
+      <div class="lesson-progress" aria-hidden="true"><span style="transform:scaleX(${(ids.indexOf(id)+1)/ids.length})"></span></div>
+      <h1>${esc(L.title)}</h1>
+      ${L.ipa ? `<p class="word-line">${sayBtn(L.title.replace(/:.*/,''), 'Listen: ' + L.title)}<span class="ipa">${esc(L.ipa)}</span></p>` : ''}
+      ${(() => { const hs = [...L.body.matchAll(/^## (.+)$/gm)].map(m => m[1]); return hs.length >= 3 ? `<nav class="jump" aria-label="In this lesson"><span>In this lesson</span>${hs.map((h, k) => `<button type="button" class="chip" data-jump="sec-${k}">${esc(h)}</button>`).join('')}</nav>` : ''; })()}
+      <div class="body">${renderBody(L.body)}</div>
+      <section class="ai-band" aria-labelledby="ai-band-t">
+        <h2 id="ai-band-t">Practise this lesson with the assistant.</h2>
+        <p>Tap a question and the assistant answers beside the lesson.</p>
+        <div class="ai-chips">${prompts().map(p => `<button type="button" class="chip" data-ask="${esc(p)}">${esc(p)}</button>`).join('')}</div>
+      </section>
+      <footer class="lesson-foot">
+        ${next ? `<a class="btn big-next" href="${lessonUrl(next)}" data-finish="${id}">Got it, next lesson ${I.arrow}</a><p class="next-name">Next: ${esc(LESSONS[next].title)}${WHERE[next].phase !== ph ? ` · Module ${WHERE[next].phase.n}` : ''}</p>`
+               : `<a class="btn big-next" href="#${ph.id}" data-finish="${id}">Got it, check yourself ${I.arrow}</a><p class="next-name">You reached the last lesson of the course.</p>`}
+        <div class="foot-row">
+          ${prev ? `<a class="link-arrow back" href="${lessonUrl(prev)}">${I.back} ${esc(LESSONS[prev].title)}</a>` : '<span></span>'}
+          <button class="done-btn" type="button" data-done="${id}" aria-pressed="${done.has(id)}"><span class="box">${I.check}</span><span class="lbl">${done.has(id) ? 'Learned' : 'Mark as learned'}</span></button>
+        </div>
+      </footer>
+    </article>
+  </div>`;
+}
+
+function viewAbout(){
+  return `
+  <header class="page-head wrap">
+    ${crumbs([['Home','#'],['About']])}
+    <h1>About the project.</h1>
+    <p class="lead">${esc(ABOUT.purpose)}</p>
+  </header>
+  <div class="wrap grid">
+    <div class="prose" style="grid-column:1 / span 7">
+      <p><strong>${esc(ABOUT.title)}.</strong></p>
+      <h2>Summary</h2>
+      <p>${esc(ABOUT.summary)}</p>
+      <h2>Where we stand</h2>
+      <p>${esc(ABOUT.stand)}</p>
+      <h2>The team</h2>
+      <p>${esc(ABOUT.team)} What makes us work for a common goal? ${esc(ABOUT.goal)}</p>
+      <div class="team-card">
+        <img src="${imgUrl('team')}" alt="Joel Contreras" loading="lazy">
+        <div><p><strong>${esc(ABOUT.leader.name)}</strong>, team leader.</p><p>${esc(ABOUT.leader.text)}</p></div>
+      </div>
+      <h2>Credits</h2>
+      <p>Lesson illustrations, audio and video were created by the project team. Photographs are from <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a>, free to use under the Unsplash License, by ${ABOUT.photoCredits.map(h => `<a href="https://unsplash.com/@${esc(h)}" target="_blank" rel="noopener">@${esc(h)}</a>`).join(', ')}.</p>
+    </div>
+    <figure style="grid-column:9 / -1;margin:0" class="about-fig">
+      <img src="${imgUrl('u.about')}" alt="University students studying together with laptops" loading="lazy" style="width:100%;aspect-ratio:4/5;object-fit:cover;background:var(--surface)">
+    </figure>
+  </div>`;
+}
+
+function viewNotFound(){
+  return `<section class="wrap empty-state"><h1>We could not find that page.</h1><p class="lead" style="margin-top:20px">The link may be old. Go back to the course and pick a module.</p><p><a class="btn" href="#course">See the course ${I.arrow}</a></p></section>`;
+}
+
+/* ---------- the assistant: a native chat on the course's own API ---------- */
+const ASSIST = (CONFIG.assistantUrl || '').trim();
+const API = ASSIST ? ASSIST.replace(/\/+$/, '') + '/api/chat' : '';
+let CTX = { phase: null, lesson: null };
+const IC = {
+  mic:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0"/><path d="M12 18v3"/></svg>',
+  send:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"/><path d="m12 5 7 7-7 7"/></svg>',
+  reset:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4v6h6"/><path d="M5.5 15a7.5 7.5 0 1 0 1.7-8.2L4 10"/></svg>',
+  talk:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20.5l1.4-4.9A8 8 0 1 1 21 12Z"/></svg>',
+  ear:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5Z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/></svg>',
+  book:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2V5Z"/><path d="M8 7h7"/></svg>',
+  pen:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16v4Z"/><path d="m13 7 4 4"/></svg>',
+  quiz:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6v.6"/><circle cx="12" cy="17" r="0.6" fill="currentColor"/></svg>',
+  bulb:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6"/><path d="M10 21h4"/><path d="M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2V16h5v-.1c0-.8.4-1.5 1-2A6 6 0 0 0 12 3Z"/></svg>',
+  vol:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5Z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg>'
+};
+const STARTERS = [
+  { icon:'talk', t:'Talk with me', d:'A simple conversation', send:'Let’s have a simple conversation in English. Ask me an easy question.', mode:'chat' },
+  { icon:'ear',  t:'Pronounce a word', d:'Hear how it sounds', fill:'How do I pronounce “”?', caret:-2 },
+  { icon:'book', t:'What does it mean?', d:'Words and phrases', fill:'What does “” mean?', caret:-7 },
+  { icon:'pen',  t:'Fix my sentence', d:'Write it, I correct it', fill:'Correct this sentence: ' },
+  { icon:'quiz', t:'Quiz me', d:'Three quick questions', send:'Quiz me with 3 easy questions, one at a time.' },
+  { icon:'bulb', t:'Explain a topic', d:'Grammar, step by step', send:'Explain the difference between have and has, with examples.' }
+];
+const KEY_CHAT = 'basic-english:chat';
+const ST = { msgs: [], mode: 'tutor', voice: false, sending: false };
+try { const s = JSON.parse(localStorage.getItem(KEY_CHAT) || 'null'); if (s && Array.isArray(s.msgs)) { ST.msgs = s.msgs.slice(-40); ST.mode = s.mode === 'chat' ? 'chat' : 'tutor'; ST.voice = !!s.voice; } } catch(e) {}
+function saveChat(){ try { localStorage.setItem(KEY_CHAT, JSON.stringify({ msgs: ST.msgs.slice(-40), mode: ST.mode, voice: ST.voice })); } catch(e) {} }
+let SID = ''; try { SID = localStorage.getItem('basic-english:sid') || ''; if (!SID){ SID = 'be_' + Math.random().toString(36).slice(2, 10) + Date.now().toString(36).slice(-4); localStorage.setItem('basic-english:sid', SID); } } catch(e) { SID = 'be_' + Math.random().toString(36).slice(2, 12); }
+
+function apiContext(){
+  const base = 'COURSE CONTEXT — Basic English (A1–A2) for English majors at Universidad Tecnológica de El Salvador. Always answer in English only, never in Spanish, with short, simple and friendly sentences.';
+  if (!CTX.phase) return base + ' The student is on the home page: greet them and help them start practising.';
+  const ph = CTX.phase;
+  let c = `${base} The student is studying Module ${ph.n}: ${ph.title}. Topics: ${phaseLessons(ph).map(id => LESSONS[id].title).join('; ')}.`;
+  if (CTX.lesson){ const L = LESSONS[CTX.lesson]; const p = (L.body.match(/^p (.+)$/m) || [])[1] || ''; c += ` Current lesson: “${L.title}”. ${p}`; }
+  return c;
+}
+function prompts(){
+  if (CTX.lesson){
+    const L = LESSONS[CTX.lesson], t = L.title.replace(/:.*/, '').toLowerCase();
+    const ex = (L.body.match(/^- (.+)$/m) || [])[1];
+    return [`Explain ${t} in simple English, with examples.`, `Give me 5 new examples of ${t}.`, `Quiz me on ${t}, one question at a time.`].concat(ex ? [`How do I pronounce “${ex.replace(/^(Active|Passive): /,'')}”?`] : []);
+  }
+  if (CTX.phase) return [`What will I learn in Module ${CTX.phase.n}?`, `Quiz me on Module ${CTX.phase.n}, one question at a time.`, `Give me a short reading for Module ${CTX.phase.n}.`];
+  return ['Help me introduce myself in English.', 'Teach me 5 useful words for today.', 'How do I pronounce “comfortable”?'];
+}
+const FOLLOW = ['Give me more examples.', 'Say it more simply.', 'Quiz me on this.', 'Give me a short dialogue.'];
+
+/* safe, small markdown: **bold** (tap to hear), *italic*, lists, paragraphs */
+function md(text){
+  const inline = s => esc(s)
+    .replace(/\*\*(.+?)\*\*/g, (m, w) => `<button type="button" class="w" data-say="${w.replace(/<[^>]+>/g,'')}" aria-pressed="false" title="Tap to hear">${w}</button>`)
+    .replace(/(^|[^*])\*(?!\s)(.+?)\*(?!\*)/g, '$1<em>$2</em>');
+  const lines = String(text).replace(/\r/g,'').split('\n');
+  let html = '', list = null;
+  const close = () => { if (list){ html += `</${list}>`; list = null; } };
+  for (const raw of lines){
+    const l = raw.trim();
+    let m;
+    if (!l){ close(); continue; }
+    if ((m = l.match(/^(\d+)[.)]\s+(.*)$/))){ if (list !== 'ol'){ close(); html += '<ol>'; list = 'ol'; } html += `<li>${inline(m[2])}</li>`; }
+    else if ((m = l.match(/^[-•*]\s+(.*)$/))){ if (list !== 'ul'){ close(); html += '<ul>'; list = 'ul'; } html += `<li>${inline(m[1])}</li>`; }
+    else { close(); html += `<p>${inline(l)}</p>`; }
+  }
+  close();
+  return html;
+}
+const plain = t => String(t).replace(/\*\*|\*/g, '').replace(/^\s*[-•]\s+/gm, '').replace(/\/[^/\n]{1,40}\//g, ' ');
+
+/* DOM: one chat that lives on the home page or in the side panel */
+const chatEl = document.createElement('section');
+chatEl.className = 'chat';
+chatEl.setAttribute('aria-label', 'English Assistant chat');
+chatEl.innerHTML = `
+  <header class="chat-top">
+    <div class="who"><span class="avatar" aria-hidden="true">${IC.talk}</span><div><strong>English Assistant</strong><span class="status"><span class="live-dot" aria-hidden="true"></span><span class="chat-ctx">Online</span></span></div></div>
+    <div class="seg" role="radiogroup" aria-label="Mode">
+      <button type="button" role="radio" data-mode="tutor" aria-checked="true">Tutor</button>
+      <button type="button" role="radio" data-mode="chat" aria-checked="false">Conversation</button>
+    </div>
+    <button type="button" class="icon-btn chat-voice" aria-pressed="false" title="Read answers aloud">${IC.vol}<span class="sr-only">Read answers aloud</span></button>
+    <button type="button" class="icon-btn chat-reset" title="New conversation">${IC.reset}<span class="sr-only">New conversation</span></button>
+  </header>
+  <div class="chat-log" role="log" aria-live="polite" aria-relevant="additions" tabindex="0"></div>
+  <div class="chat-sugg" role="group" aria-label="Suggested questions"></div>
+  <form class="chat-form">
+    <label class="sr-only" for="chat-input">Your message</label>
+    <textarea id="chat-input" rows="1" maxlength="600" placeholder="Ask me anything…" enterkeyhint="send"></textarea>
+    <button type="button" class="mic" aria-pressed="false" title="Speak in English">${IC.mic}<span class="sr-only">Speak in English</span></button>
+    <button type="submit" class="send" title="Send">${IC.send}<span class="sr-only">Send</span></button>
+  </form>`;
+const logEl = $('.chat-log', chatEl), suggEl = $('.chat-sugg', chatEl), form = $('.chat-form', chatEl), input = $('#chat-input', chatEl), micBtn = $('.mic', chatEl);
+
+function bubble(m, animate){
+  const el = document.createElement('div');
+  el.className = 'msg ' + (m.r === 'u' ? 'me' : m.err ? 'bot err' : 'bot') + (animate ? ' enter' : '');
+  if (m.r === 'u') el.innerHTML = `<p>${esc(m.t)}</p>`;
+  else if (m.err) el.innerHTML = `<p>${esc(m.t)}</p><div class="msg-acts"><button type="button" class="mini" data-retry>${IC.reset} Try again</button>${ASSIST ? `<a class="mini" href="${esc(ASSIST)}" target="_blank" rel="noopener">Open the full assistant</a>` : ''}</div>`;
+  else el.innerHTML = `<div class="md">${md(m.t)}</div><div class="msg-acts"><button type="button" class="mini" data-say="${esc(plain(m.t))}" aria-pressed="false">${IC.vol} Listen</button><button type="button" class="mini" data-say-slow="${esc(plain(m.t))}">${I.slow} Slowly</button></div>`;
+  return el;
+}
+function welcome(){
+  return `<div class="welcome">
+    <div class="msg bot"><div class="md"><p>Hi! I’m your English assistant. What do you want to practise today?</p></div></div>
+    <ul class="starters">${STARTERS.map((s, k) => `<li><button type="button" data-starter="${k}"><span class="ic">${IC[s.icon]}</span><span><strong>${esc(s.t)}</strong><span>${esc(s.d)}</span></span></button></li>`).join('')}</ul>
+  </div>`;
+}
+function renderLog(){
+  logEl.innerHTML = '';
+  if (!ST.msgs.length) logEl.innerHTML = welcome();
+  else ST.msgs.forEach(m => logEl.appendChild(bubble(m, false)));
+  scrollLog(true);
+}
+function scrollLog(instant){ logEl.scrollTo({ top: ST.msgs.length ? logEl.scrollHeight : 0, behavior: instant ? 'auto' : 'smooth' }); }
+function renderSugg(){
+  const last = ST.msgs[ST.msgs.length - 1];
+  const list = ST.msgs.length && last && last.r === 'b' && !last.err ? FOLLOW : prompts();
+  suggEl.innerHTML = list.map(p => `<button type="button" class="chip" data-send="${esc(p)}">${esc(p)}</button>`).join('');
+}
+function setMode(m){ ST.mode = m; $$('.seg [data-mode]', chatEl).forEach(b => b.setAttribute('aria-checked', b.dataset.mode === m)); saveChat(); }
+function setVoice(v){ ST.voice = v; $('.chat-voice', chatEl).setAttribute('aria-pressed', v); saveChat(); }
+setMode(ST.mode); setVoice(ST.voice);
+
+async function ask(text){
+  text = String(text || '').trim();
+  if (!text || ST.sending) return;
+  if (!API){ location.hash = '#course'; return; }
+  if (!ST.msgs.length) logEl.innerHTML = '';
+  // drop an error bubble before retrying
+  if (ST.msgs.length && ST.msgs[ST.msgs.length - 1].err){ ST.msgs.pop(); logEl.lastElementChild && logEl.lastElementChild.remove(); }
+  const um = { r: 'u', t: text }; ST.msgs.push(um); logEl.appendChild(bubble(um, true));
+  input.value = ''; autosize();
+  const typing = document.createElement('div'); typing.className = 'msg bot typing enter'; typing.innerHTML = '<span class="think">Thinking…</span>';
+  logEl.appendChild(typing); scrollLog();
+  ST.sending = true; chatEl.classList.add('busy'); suggEl.innerHTML = '';
+  const history = ST.msgs.slice(0, -1).filter(m => !m.err).slice(-12).map(m => ({ role: m.r === 'u' ? 'user' : 'model', content: m.t }));
+  let reply = '', failed = false;
+  for (let attempt = 0; attempt < 2 && !reply; attempt++){
+    const ctl = new AbortController(); const to = setTimeout(() => ctl.abort(), 55000);
+    try {
+      const r = await fetch(API, { method: 'POST', signal: ctl.signal, headers: { 'Content-Type': 'application/json', 'x-sid': SID }, body: JSON.stringify({ message: text, history, level: 'basico', mode: ST.mode, focus: '', context: apiContext() }) });
+      const d = await r.json().catch(() => null);
+      if (d && d.reply && String(d.reply).trim()) reply = String(d.reply).trim(); else failed = true;
+    } catch(e){ failed = true; }
+    clearTimeout(to);
+  }
+  typing.remove();
+  const bm = reply ? { r: 'b', t: reply } : { r: 'b', err: true, t: SANDBOX ? 'This preview cannot connect to the assistant. On the published site it answers right here.' : 'I could not answer right now. Check your connection and try again.' };
+  ST.msgs.push(bm);
+  const el = bubble(bm, true); logEl.appendChild(el);
+  ST.sending = false; chatEl.classList.remove('busy');
+  if (!bm.err) saveChat();
+  renderSugg(); scrollLog();
+  if (reply && ST.voice) speak(plain(reply), $('[data-say]', el));
+}
+function autosize(){ input.style.height = 'auto'; input.style.height = Math.min(input.scrollHeight, 160) + 'px'; }
+input.addEventListener('input', autosize);
+input.addEventListener('keydown', e => { if (e.key === 'Enter' && !e.shiftKey && !e.isComposing){ e.preventDefault(); ask(input.value); } });
+form.addEventListener('submit', e => { e.preventDefault(); ask(input.value); });
+chatEl.addEventListener('click', e => {
+  const st = e.target.closest('[data-starter]');
+  if (st){ const s = STARTERS[+st.dataset.starter]; if (s.mode) setMode(s.mode); if (s.send) ask(s.send); else { input.value = s.fill; autosize(); input.focus(); const p = s.caret ? s.fill.length + s.caret : s.fill.length; input.setSelectionRange(p, p); } return; }
+  const sd = e.target.closest('[data-send]'); if (sd){ ask(sd.dataset.send); return; }
+  const slow = e.target.closest('[data-say-slow]'); if (slow){ speak(slow.dataset.saySlow, null, 0.62); return; }
+  if (e.target.closest('[data-retry]')){ const lastU = [...ST.msgs].reverse().find(m => m.r === 'u'); if (lastU){ ST.msgs.splice(ST.msgs.lastIndexOf(lastU), 1); logEl.querySelectorAll('.msg.me'); renderLog(); ask(lastU.t); } return; }
+  const md_ = e.target.closest('.seg [data-mode]'); if (md_){ setMode(md_.dataset.mode); return; }
+  if (e.target.closest('.chat-voice')){ setVoice(!ST.voice); return; }
+  if (e.target.closest('.chat-reset')){ if (canSpeak) synth.cancel(); ST.msgs = []; saveChat(); renderLog(); renderSugg(); input.focus(); return; }
+});
+/* speaking practice with the microphone */
+const Rec = window.SpeechRecognition || window.webkitSpeechRecognition;
+let rec = null;
+if (!Rec) micBtn.hidden = true;
+micBtn.addEventListener('click', () => {
+  if (rec){ rec.stop(); return; }
+  try {
+    rec = new Rec(); rec.lang = 'en-US'; rec.interimResults = true; rec.maxAlternatives = 1;
+    let finalText = '';
+    rec.onresult = ev => { let t = ''; for (const r of ev.results){ t += r[0].transcript; if (r.isFinal) finalText = t; } input.value = t; autosize(); };
+    rec.onend = () => { micBtn.setAttribute('aria-pressed', 'false'); chatEl.classList.remove('listening'); const t = (finalText || input.value).trim(); rec = null; if (t) ask(t); };
+    rec.onerror = () => { input.placeholder = 'I could not hear you. Allow the microphone, or type instead.'; };
+    micBtn.setAttribute('aria-pressed', 'true'); chatEl.classList.add('listening'); input.value = ''; input.placeholder = 'Listening… speak in English';
+    rec.start();
+  } catch(e){ rec = null; micBtn.hidden = true; }
+});
+renderLog(); renderSugg();
+
+/* where the chat lives: big on the home page, in the side panel everywhere else */
+const fab = $('#ai-fab'), panel = $('#ai-panel'), slot = $('.ai-slot', panel), panelCtx = $('.ai-ctx', panel);
+let lastFocus = null;
+function placeChat(){
+  const home = $('#chat-home', main);
+  if (home){ if (chatEl.parentElement !== home) home.appendChild(chatEl); closeAssistant(true); }
+  else if (chatEl.parentElement !== slot) slot.appendChild(chatEl);
+  scrollLog(true);
+}
+function fabLabel(){ return CTX.lesson ? 'Ask about this lesson' : CTX.phase ? `Ask about Module ${CTX.phase.n}` : 'Ask the assistant'; }
+function refreshAssistant(){
+  const lbl = $('.ai-fab-label', fab); const next = fabLabel();
+  if (lbl.textContent !== next){ lbl.classList.add('swap'); setTimeout(() => { lbl.textContent = next; lbl.classList.remove('swap'); }, 140); }
+  const where = CTX.lesson ? LESSONS[CTX.lesson].title : CTX.phase ? phaseTitle(CTX.phase) : '';
+  $('.chat-ctx', chatEl).textContent = where ? 'Helping with: ' + where : 'Online · Ready to help';
+  panelCtx.textContent = where;
+  fab.hidden = !!$('#chat-home', main) || !API;
+  placeChat(); if (!ST.sending) renderSugg();
+}
+function openAssistant(prompt){
+  if (!API){ return; }
+  const home = $('#chat-home', main);
+  if (home){ home.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' }); if (prompt) ask(prompt); else setTimeout(() => input.focus({ preventScroll: true }), 300); return; }
+  lastFocus = document.activeElement;
+  panel.classList.add('open'); panel.removeAttribute('inert'); document.body.classList.add('ai-open');
+  fab.setAttribute('aria-expanded', 'true');
+  scrollLog(true);
+  if (prompt) ask(prompt); else setTimeout(() => input.focus({ preventScroll: true }), 120);
+}
+function closeAssistant(silent){
+  if (!panel.classList.contains('open')) return;
+  panel.classList.remove('open'); panel.setAttribute('inert', ''); document.body.classList.remove('ai-open');
+  fab.setAttribute('aria-expanded', 'false');
+  if (silent) return;
+  if (lastFocus && document.contains(lastFocus)) lastFocus.focus({ preventScroll: true }); else fab.focus({ preventScroll: true });
+}
+fab.addEventListener('click', () => panel.classList.contains('open') ? closeAssistant() : openAssistant());
+$('.ai-close', panel).addEventListener('click', () => closeAssistant());
+const expandBtn = $('.ai-expand', panel);
+expandBtn.addEventListener('click', () => { const on = !panel.classList.contains('wide'); panel.classList.toggle('wide', on); expandBtn.setAttribute('aria-pressed', on); $('span', expandBtn).textContent = on ? 'Shrink' : 'Expand'; });
+document.addEventListener('keydown', e => { if (e.key === 'Escape' && panel.classList.contains('open') && !document.querySelector('dialog[open]')) closeAssistant(); });
+
+/* ---------- router ---------- */
+const main = $('#main');
+function route(){
+  const key = decodeURIComponent(location.hash.replace(/^#\/?/, '')).split('/').filter(Boolean).pop() || '';
+  let html, title = 'Basic English', navKey = '';
+  const ph = COURSE.find(p => p.id === key);
+  CTX = { phase: ph || (LESSONS[key] && WHERE[key] ? WHERE[key].phase : null), lesson: LESSONS[key] && WHERE[key] ? key : null };
+  if (!key){ html = viewHome(); navKey = 'home'; }
+  else if (key === 'course'){ html = viewCourse(); title = 'Course · Basic English'; navKey = 'course'; }
+  else if (key === 'assistant'){ html = viewHome(); navKey = 'home'; }
+  else if (key === 'about'){ html = viewAbout(); title = 'About · Basic English'; navKey = 'about'; }
+  else if (ph){ html = viewPhase(ph); title = phaseTitle(ph) + ' · Basic English'; navKey = 'course'; }
+  else if (LESSONS[key] && WHERE[key]){ html = viewLesson(key); title = LESSONS[key].title + ' · Basic English'; navKey = 'course'; }
+  else { html = viewNotFound(); title = 'Not found · Basic English'; }
+  CTX = { phase: ph || (LESSONS[key] && WHERE[key] ? WHERE[key].phase : null), lesson: LESSONS[key] && WHERE[key] ? key : null };
+  if (canSpeak) synth.cancel(); current = null;
+  main.innerHTML = `<div class="view">${html}</div>`;
+  $$('.view > *', main).forEach((el, k) => el.style.setProperty('--i', Math.min(k, 4)));
+  document.title = title;
+  $$('.nav a[data-nav]').forEach(a => { if (a.dataset.nav === navKey) a.setAttribute('aria-current','page'); else a.removeAttribute('aria-current'); });
+  closeMenu();
+  window.scrollTo(0, 0);
+  const h1 = $('h1', main); if (h1 && routed){ h1.setAttribute('tabindex','-1'); h1.focus({preventScroll:true}); }
+  routed = true;
+  afterRender();
+  refreshAssistant();
+  if (key === 'assistant') setTimeout(() => openAssistant(), 50);
+}
+let routed = false;
+
+/* ---------- behaviours after render ---------- */
+let reelTimer = null, io = null;
+function afterRender(){
+  // hero reel
+  clearInterval(reelTimer);
+  const reel = $('.reel', main);
+  if (reel && !matchMedia('(prefers-reduced-motion: reduce)').matches){
+    let k = 0; const items = () => [...reel.children];
+    reelTimer = setInterval(() => { if (document.hidden) return; const it = items(); if (!it.length) return; it[k % it.length].classList.remove('on'); k = (k + 1) % it.length; it[k].classList.add('on'); }, 2600);
+  }
+  // reveal on scroll
+  if (io) io.disconnect();
+  const els = $$('.reveal', main);
+  if ('IntersectionObserver' in window){
+    io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -10% 0px', threshold: 0.12 });
+    els.forEach(el => io.observe(el));
+  } else els.forEach(el => el.classList.add('in'));
+  // listen tool
+  const tool = $('#listen-tool', main);
+  if (tool){
+    const ta = $('#say-text', tool);
+    const go = (rate, btn) => { const t = ta.value.trim(); if (!t){ ta.focus(); $('#tool-note').textContent = 'Write a word or a sentence first.'; return; } speak(t, null, rate); };
+    tool.addEventListener('submit', e => { e.preventDefault(); go(0.92); });
+    $('[data-rate="0.62"]', tool).addEventListener('click', () => go(0.62));
+    $$('[data-fill]', tool).forEach(b => b.addEventListener('click', () => { ta.value = b.dataset.fill; speak(b.dataset.fill, null, 0.92); }));
+    if (!canSpeak) $('#tool-note').textContent = 'Your browser cannot read text aloud. Try Chrome, Edge or Safari.';
+  }
+  // quiz
+  $$('[data-quiz]', main).forEach(list => {
+    const scoreEl = $('[data-score]', main); const total = $$('.qitem', list).length;
+    list.addEventListener('change', e => {
+      const input = e.target; if (input.type !== 'radio') return;
+      const fs = input.closest('fieldset'); const fb = $('.feedback', fs);
+      $$('.opt', fs).forEach(o => o.classList.remove('right','wrong'));
+      const ok = input.dataset.correct === 'true';
+      input.closest('.opt').classList.add(ok ? 'right' : 'wrong');
+      fs.dataset.answered = ok ? 'ok' : 'no';
+      const right = $$('input[data-correct="true"]', fs)[0].nextElementSibling.textContent;
+      fb.className = 'feedback ' + (ok ? 'ok' : 'no');
+      if (ok) fb.textContent = 'Correct.'; else { fb.innerHTML = `Not quite. The answer is “${esc(right)}”. `; const b = document.createElement('button'); b.type = 'button'; b.className = 'link-ask'; b.dataset.ask = `Why is “${right}” correct in this sentence: “${$('legend', fs).textContent}”? Explain in simple English.`; b.innerHTML = I.chat + ' Ask the assistant why'; fb.appendChild(b); }
+      const score = $$('fieldset[data-answered="ok"]', list).length;
+      if (scoreEl) scoreEl.textContent = `${score} / ${total}`;
+    });
+  });
+  // lesson side toggle
+  const side = $('.side', main);
+  if (side){
+    const t = $('.side-toggle', side);
+    t.addEventListener('click', () => { const open = side.dataset.open !== 'true'; side.dataset.open = open; t.setAttribute('aria-expanded', open); });
+    const cur = $('a[aria-current="page"]', side); if (cur && window.innerWidth > 980) cur.scrollIntoView({block:'center'});
+  }
+}
+
+/* ---------- global delegation ---------- */
+document.addEventListener('click', e => {
+  const fin = e.target.closest('[data-finish]');
+  if (fin){ done.add(fin.dataset.finish); saveDone(); }
+  const jp = e.target.closest('[data-jump]');
+  if (jp){ const h = document.getElementById(jp.dataset.jump); if (h){ h.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' }); h.focus({ preventScroll: true }); } return; }
+  const a = e.target.closest('[data-ask]');
+  if (a){ openAssistant(a.dataset.ask); return; }
+  const s = e.target.closest('[data-say]');
+  if (s){ speak(s.dataset.say, s); return; }
+  const m = e.target.closest('[data-embed]');
+  if (m){ const f = document.createElement('iframe'); f.src = `https://drive.google.com/file/d/${m.dataset.embed}/preview`; f.title = m.dataset.title; f.allow = 'autoplay; fullscreen'; f.allowFullscreen = true; m.replaceWith(f); return; }
+  const z = e.target.closest('.zoom');
+  if (z){ openLightbox(z.dataset.full, z.dataset.alt, z); return; }
+  const d = e.target.closest('[data-done]');
+  if (d){
+    const id = d.dataset.done;
+    if (done.has(id)) done.delete(id); else done.add(id);
+    saveDone();
+    const on = done.has(id);
+    d.setAttribute('aria-pressed', on); $('.lbl', d).textContent = on ? 'Learned' : 'Mark as learned';
+    const li = $(`.side a[href="${lessonUrl(id)}"]`, main); if (li) li.parentElement.classList.toggle('done', on);
+  }
+});
+
+/* broken images: keep the page whole */
+document.addEventListener('error', e => {
+  const img = e.target; if (!(img instanceof HTMLImageElement)) return;
+  const reel = img.closest('.reel');
+  if (reel){ const on = img.classList.contains('on'); img.remove(); if (on && reel.firstElementChild) reel.firstElementChild.classList.add('on'); return; }
+  const fig = img.closest('figure'); const alt = img.alt || 'Image';
+  const src = img.currentSrc || img.src;
+  const box = `<div class="img-off"><span class="ipa-big" aria-hidden="true">/ɪ/</span><strong>${esc(alt)}</strong><a href="${esc(src)}" target="_blank" rel="noopener">Open the image</a></div>`;
+  if (fig){ fig.classList.add('off'); const btn = img.closest('button'); (btn || img).outerHTML = box; }
+  else img.style.visibility = 'hidden';
+}, true);
+
+/* lightbox */
+const lb = $('#lightbox'); let lbReturn = null;
+function openLightbox(src, alt, from){
+  if (!lb || !lb.showModal){ window.open(src, '_blank', 'noopener'); return; }
+  lbReturn = from; const img = $('img', lb); img.src = src; img.alt = alt; $('p', lb).textContent = alt;
+  lb.showModal();
+}
+if (lb){
+  $('.close', lb).addEventListener('click', () => lb.close());
+  lb.addEventListener('click', e => { if (e.target === lb) lb.close(); });
+  lb.addEventListener('close', () => { if (lbReturn) lbReturn.focus(); });
+}
+
+/* header + menu */
+const header = $('.site-header'), nav = $('#nav'), menuBtn = $('.menu-btn');
+function closeMenu(){ nav.classList.remove('open'); menuBtn.setAttribute('aria-expanded','false'); }
+menuBtn.addEventListener('click', () => { const open = !nav.classList.contains('open'); nav.classList.toggle('open', open); menuBtn.setAttribute('aria-expanded', open); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape' && nav.classList.contains('open')){ closeMenu(); menuBtn.focus(); } });
+addEventListener('scroll', () => header.classList.toggle('scrolled', scrollY > 8), { passive: true });
+
+addEventListener('hashchange', route);
+route();
+})();
+
+</script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+BASIC ENGLISH - sitio redisenado
+
+Contenido:
+  index.html   El sitio completo (lecciones, estilos y codigo en un solo archivo).
+  images/      Ilustraciones del equipo y fotos de Unsplash (licencia libre), en formato WebP.
+
+Publicarlo gratis en 1 minuto:
+  1. Entra a https://app.netlify.com/drop (cuenta gratuita).
+  2. Arrastra esta carpeta "basic-english" completa al recuadro.
+  3. Listo: Netlify te da un enlace publico. Puedes cambiar el nombre en Site configuration.
+
+Editar contenido: abre index.html con VS Code o el Bloc de notas y busca "const CONFIG"
+(direccion del asistente) o "const LESSONS" (las lecciones). La guia completa esta en el
+documento "Rediseno Basic English: guia de publicacion y Google Sites".
